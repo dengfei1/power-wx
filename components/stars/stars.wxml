@@ -1,0 +1,12 @@
+  <view class='star te-al'>
+      <!-- <text class='iconfont icon-xingxing'></text>
+      <text class='iconfont icon-xingxing'></text>
+      <text class='iconfont icon-xingxing'></text>
+      <text class='iconfont icon-xingxing'></text>
+      <text class='iconfont icon-xingxing'></text> -->
+      <view class='stars'>
+        <view class='contents'>
+          <view wx:for="{{stars}}" wx:key="index" style='background:url("{{item.flag==1?item.bgImg:item.bgfImg}}") no-repeat top; background-size:100%;width:{{starWidth}}rpx' data-index="{{index}}" bindtap='scores' name='star' ></view>
+        </view>
+      </view>
+</view>

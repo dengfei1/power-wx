@@ -1,0 +1,97 @@
+<!--pages/energy/energy.wxml-->
+
+<view class='container f3' id='energy'>
+  <view class='topTabSwiper'>
+    <view class='table fixed'>
+      <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>用电分析</view>
+      <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>费用分析</view>
+      <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>数据查询</view>
+    </view>
+    <view class='swiperList'>
+      <swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+        <!-- 用电分析 -->
+        <swiper-item>
+          <view class='canvasBox white'>
+          <canvas canvas-id="canvas1" class="canvas"></canvas>
+        </view>
+          <view class='canvasBox white'>
+            <view class='name iconfont icon-tubiao f1'> 工单数量（件）</view>
+            <canvas canvas-id="canvas2" class="canvas"></canvas>
+          </view>
+          <view class='canvasBox white'>
+            <view class='name iconfont icon-tubiao1 f1'> 费用统计（kw.h）</view>
+            <canvas canvas-id="canvas3" class="canvas"></canvas>
+          </view>
+          <!-- 
+          <view class="table">
+            <view class='bo f4' style='background:orange;width:200rpx'>新增 +</view>
+            <view class='bo f4' style='background:orange;width:200rpx'>导出 》</view>
+            <view class="tr bg-w">
+              <view class="th">流程编号</view>
+              <view class="th">流程名称</view>
+              <view class="th ">状态</view>
+              <view class="th">开始时间</view>
+              <view class="th " style='color:blue'>操作</view>
+            </view>
+            <block wx:for="{{listData}}" wx:key="{{code}}">
+              <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+                <view class="td">{{item.code}}</view>
+                <view class="td">{{item.text}}</view>
+                <view class="td">{{item.type}}</view>
+                <view class="td">{{item.time}}</view>
+                <view class="td">{{item.op}}</view>
+
+              </view>
+              <view class="tr" wx:else>
+                <view class="td">{{item.code}}</view>
+                <view class="td">{{item.text}}</view>
+                <view class="td">{{item.type}}</view>
+                <view class="td">{{item.time}}</view>
+                <view class="td">{{item.op}}</view>
+              </view>
+            </block>
+          </view> -->
+
+        </swiper-item>
+        <!-- 用电分析结束 -->
+        <!-- 费用分析 -->
+        <swiper-item>
+          <view class='canvasBox white'>
+            <canvas canvas-id="canvas4" class="canvas"></canvas>
+          </view>
+          <view class='canvasBox white'>
+            <canvas canvas-id="canvas5" class="canvas"></canvas>
+          </view>
+          <view class="echarts canvasBox white">
+            <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+          </view>
+        </swiper-item>
+        <!-- 费用分析结束 -->
+        <!-- 数据查询 -->
+        <swiper-item>
+          <view class='select bo white te-al h7'>
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio value="上半年" checked="true" />上半年
+              <radio value="下半年" />下半年
+            </radio-group>
+            <picker mode="date" value="{{date}}" start="2005" end="2019" bindchange="bindDateChange" fields="year">
+              <view class="picker">
+                {{date}}
+                <text class='iconfont icon-tubiao2'></text>
+              </view>
+            </picker>
+          </view>
+          <view class='canvasBox white'>
+            <canvas canvas-id="canvas6" class="canvas"></canvas>
+          </view>
+          <view class='canvasBox white'>
+            <canvas canvas-id="canvas7" class="canvas"></canvas>
+          </view>
+
+        </swiper-item>
+        <!-- 数据查询结束 -->
+      </swiper>
+    </view>
+  </view>
+
+</view>

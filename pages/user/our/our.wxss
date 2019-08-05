@@ -1,0 +1,32 @@
+/* pages/user/our/our.wxss */
+
+page {
+  background: white;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  margin: 200rpx auto 20rpx auto;
+  width: 600rpx;
+}
+image{
+  width: 600rpx;
+}
+.name {
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 120rpx;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#0575affc), to(#b1d1f9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.comp {
+  bottom: -430rpx;
+  left: 0;
+  right: 0;
+}

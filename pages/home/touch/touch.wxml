@@ -1,0 +1,40 @@
+<view class='container'>
+    <!-- 导航地址 -->
+    <view class='nav white' bindtap='toProvinces'>
+          <text class='iconfont icon-dizhi fl '></text>
+          <text class='address fl f4'>{{address}}</text>
+          <text class='iconfont icon-gengduo fr'></text>
+          <view class='cleaned'></view>
+    </view>
+    <!-- 导航地址j结束 -->
+    <swiper style="height: 100%">
+    <swiper-item  style="height: 100%">
+      <scroll-view scroll-y="true"  style="height: 100%;">
+       
+       <!-- 公司列表 -->
+         <view class="list">
+           <view class='list-item white'  wx:for="{{listArr}}">
+              <view class='title f4'>{{index+1}}.{{item.name}}</view>
+              <view class='address1 f2'>{{item.address}}</view>
+              <view class='business f2'>业务范围：{{item.content}}</view>
+              <view class='item-wraper' bindtap=''>
+                  <view class='store dis f2'>
+                    <text class='icon iconfont icon-dianhua'></text>
+                    <text bindtap='callMerchant' data-index="{{index}}">联系商家</text>
+                  </view>
+                  <view class='navigation dis f2' bindtap='navigation'>
+                    <text class='icon icon1 iconfont icon-daohang'></text>
+                    <text>导航</text>
+                  </view>
+                  <view class='distance dis fr f2'>{{item.km}}</view>
+              </view>
+           </view>         
+         </view>
+       <!-- 公司列表结束 -->  
+         <!-- 信息提示 -->
+         <view class='tips f2'>{{tips}}</view>
+         <!-- 信息提示结束 -->
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,12 @@
+<view class='container'>
+   <view class='list'>
+      <view class='list-item f3'>
+          <view class='item-title'>全球统一服务热线</view>
+          <view class='item-tel'>400-687-8233</view>
+      </view>
+       <view class='list-item f3' bindtap='toPromise'>
+          <view class='item-title'>服务承诺</view>
+          <view class='iconfont icon-gengduo fr'></view>
+      </view>
+   </view>
+</view>

@@ -1,0 +1,214 @@
+/* pages/home/myMsg/assess/assess.wxss */
+
+/* 维修员姓名 */
+
+.servicer {
+  margin: 20rpx;
+  padding: 20rpx;
+}
+
+.msg {
+  border-bottom: 1px #cdcdcd solid; 
+}
+
+.img {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 10rpx;
+  border-radius: 50%;
+  background: #cdcdcd;
+}
+
+.pleased {
+  width: 170rpx;
+  line-height: 60rpx;
+  border: 1rpx solid #cdcdcd;
+  border-radius: 30rpx;
+  margin: 10rpx;
+}
+
+.nameBox {
+  width: 500rpx;
+  margin-left: 10rpx;
+}
+
+.select {
+  margin: 10rpx 10rpx;
+}
+
+.label {
+  width: 190rpx;
+  border: solid 1px #979797;
+}
+
+.selectStyle{
+  background:#ff8c0e;
+  color: #fff;
+  border: solid 1px #ff8c0e;
+}
+
+.selectStyle1{
+  background:#ff8c0e;
+  color: #fff;
+  border: solid 1px #ff8c0e;
+}
+
+/* 故障项目名称 */
+
+.stadus {
+  background: yellow;
+}
+
+.star {
+  margin-top: 20rpx;
+}
+
+.icon-xingxing {
+  font-size: 72rpx;
+  color: #cdcdcd;
+}
+
+.remark {
+  border: 1px solid #cdcdcd;
+  width: 645rpx;
+  padding: 10rpx;
+  background: rgba(0, 0, 0, 0.1);
+  height: 150rpx;
+  position:relative;
+  text-indent: 10rpx;
+  margin-top: 18rpx;
+}
+.hint{
+  position:absolute;
+  right: 10rpx;
+  bottom: 0rpx;
+  color: #747273;
+  font-size: 20rpx;
+}
+/* 上传照片 */
+
+.camera {
+  width: 120rpx;
+  line-height: 120rpx;
+  border: 1px solid #cdcdcd;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.icon-camera1 {
+  font-size: 50rpx;
+}
+
+.imged {
+  width: 122rpx;
+  height: 122rpx;
+  overflow: hidden;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  position: relative;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 小星星 */
+.server-assess{
+  width: 710rpx;
+  margin: 0 auto;
+  padding:20rpx 20rpx 40rpx 20rpx;
+  box-sizing: border-box;
+  border-radius: 15rpx;
+}
+
+.title{
+  margin-left: 10rpx;
+}
+.assess{
+  display: flex;
+  flex-direction: row;
+  height: 60rpx;
+  line-height:60rpx;
+}
+.assess-text{
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+
+
+/* 切换满意度 */
+
+.bottomSwiper {
+  zoom: 1;
+}
+
+.bottomSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tabBorer1 {
+  color: #fc9366;
+}
+
+.swiper1 {
+  width: 100%;
+}
+
+checkbox{width: 33%}
+
+/*删除按钮*/
+
+/*每张图片所占容器*/
+
+.item {
+ position:relative;
+margin:15rpx;
+width:180rpx;
+height:180rpx;
+
+}
+
+.item image {
+  width: 100%;
+  height: 100%;
+}
+
+/*add按钮*/
+
+.item .addIcon {
+  position: relative;
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 80rpx;
+  background: #f2f2f2;
+  color: #555;
+}
+
+/*删除按钮*/
+
+.delete {
+ position:absolute;
+right:-13rpx;
+top:-18rpx;
+opacity:1;
+height:36rpx;
+font-size:22rpx;
+font-weight:700;
+padding:0 8rpx 0 10rpx;
+
+}
+.gallery {    
+  width:630rpx;
+margin:0 auto;
+display:flex;
+justify-content:flex-start;
+flex-wrap:wrap;
+max-height:625rpx;
+overflow:hidden;
+
+}

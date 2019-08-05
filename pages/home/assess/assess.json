@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "stars": "/components/stars/stars"
+  },
+  "navigationBarTitleText": "评价"
+}

@@ -1,0 +1,76 @@
+<view class="container f3">
+
+  <view class='logo te-al'>
+    <image src='/images/logo.png' style='width:360rpx;height:320rpx'></image>
+  </view>
+  <!-- 密码登录 -->
+  <view wx:if="{{isHiddend}}">
+    <form bindsubmit="passwordLoad">
+      <!-- <view class='row'>
+        <input placeholder='请输入手机号' name='phone' type='number' bindinput='bindNameInput' />
+      </view> -->
+      <view class='row'>
+        <input placeholder='请输入用户名' name='userName' type='text' bindinput='bindNameInput' />
+      </view>
+      <view class='row'>
+        <input placeholder='输入密码' name='password' type='password' bindinput='bindPasswordInput' />
+      </view>
+      <view class='h9'>
+        <text class='f1 fr register' bindtap='register'>注册 </text>
+        <text class='f1 fr load' bindtap='toIdentify'>验证码登录 |</text>
+      </view>
+      <view class='cleaned'></view>
+      <view>
+        <button class='submit' form-type="submit">登 录</button>
+      </view>
+    </form>
+  </view>
+
+  <!-- 验证码登录 -->
+  <view wx:else>
+    <form bindsubmit="codeLoad">
+      <view class='row'>
+        <input placeholder='请输入手机号' type='number' bindinput='bindPhoneInput' name='phone' value="{{phone}}" />
+      </view>
+      <view class='row'>
+        <input class='fl' placeholder='请输验证码' bindinput='bindCodeInput' style='width:400rpx' name='code' />
+        <button class='codeBtn fr f1 {{codeStyle}}' bindtap='getCode' hidden='{{hidden}}' disabled='{{btnDisabled}}'>{{isSecondHide==true?second:''}}{{btnValue}}</button>
+        <view class='cleaned'></view>
+      </view>
+      <view class='h9'>
+        <text class='f1 fr register' bindtap='register'>注册 </text>
+        <text class='f1 fr load' bindtap='toPassword'>密码登录 |</text>
+      </view>
+      <view class='cleaned'></view>
+      <view>
+        <button class='submit' form-type="submit">登 录</button>
+      </view>
+    </form>
+  </view>
+
+
+  <!-- 注册弹框 -->
+  <view class='registerMask' wx:if='{{isHide}}'>
+    <form bindsubmit='regis'>
+      <view class='box bo white rela'>
+        <view class='abso iconfont icon-shanchu' bindtap='back'></view>
+        <view class='title te-al f4'>注册</view>
+        <view class='row'>
+          <input placeholder='请输入手机号' type='number' bindinput='bindPhoneInput' name="phone" value="{{phone}}" />
+        </view>
+        <view class='row'>
+          <input placeholder='请输入密码' type='password' bindinput='bindPasswordInput' name="password"></input>
+        </view>
+        <view class='row'>
+          <input placeholder='请确认密码' type='password' bindinput='bindPasswordInput1' name="password"></input>
+        </view>
+        <view class='row'>
+          <input class='fl' placeholder='请输入验证码' bindinput='bindCodeInput' style='width:400rpx;' name="code" />
+         <button class='codeBtn fr f1 {{codeStyle}}' bindtap='getCode' hidden='{{hidden}}' disabled='{{btnDisabled}}'>{{isSecondHide==true?second:''}}{{btnValue}}</button>
+          <view class='cleaned'></view>
+        </view>
+        <button form-type="submit" class='submit'>注 册</button>
+      </view>
+    </form>
+  </view>
+</view>

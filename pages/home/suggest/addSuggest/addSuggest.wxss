@@ -1,0 +1,21 @@
+.container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  padding: 0 20rpx;
+}
+.box {
+  width: 90%;
+  padding: 20rpx;
+}
+.section__title{
+  line-height: 50rpx;
+}
+.iconfont{ 
+  color: #0194dd;
+  vertical-align: middle;
+  }

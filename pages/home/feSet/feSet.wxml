@@ -1,0 +1,75 @@
+<!--pages/home/feSet/feSet.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='container white h6 f3' id='feSet'>
+
+    <view class='faultInfo  f4'>故障信息</view>
+    <!-- <view class='textarea'>
+      <textarea name="name1" bindblur="bindTextAreaBlur" auto-height placeholder="*请详细描述您的问题和建议" />
+    </view> -->
+    <view class='fault-wraper'>
+        <view  class='item-option' bindtap='toUuid'>
+          <text class='fl'>{{show==true?"设备编号：":"选择故障设备"}}{{uuid!=''?uuid:''}}</text>
+          <text class='iconfont icon-gengduo fr'></text>
+        </view>
+        <view  class='item-option'>
+          <!-- <text class='fl'>{{name!=''?name:'选择故障类别'}}</text>
+          <text class='iconfont icon-gengduo fr'></text> -->
+           <picker class='picker' mode="selector" bindchange="bindFeSetStTyle" value="{{feSetstyleValue}}" range="{{feSetstyle}}" name='feSet'>
+              <text class=' f3'>{{feSetstyle[feSetstyleValue]}}</text>
+              <text class='iconfont icon-tubiao- fr' style='margin-left:20rpx'></text>
+           </picker>
+        </view>
+        <view  class='item-option clean-border' bindtap='toDescribe'>
+          <text class='fl'>{{textarea!=''?textarea:'当前故障描述'}}</text>
+        </view>
+         <view class='textarea white'>
+            <textarea name="textarea" bindblur="bindTextAreaBlur" placeholder="*请详细描述设备故障" placeholder-style="color:#e2e2e2;" />
+         </view>
+        <view class='updata f3'>请上传故障图片<text class='f2'>(最多只能上传三张图片)</text></view>
+        <view class="gallery">
+
+          <view class="item dis" wx:for="{{images}}" wx:key="">
+            <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="aspectFill" />
+
+            <!-- 删除按钮 -->
+            <view class="delete" bindtap="delete" data-index="{{index}}">
+              <text class='iconfont icon-shanchu'></text>
+            </view>
+          </view>
+          <view class="item" bindtap="chooseImg">
+            <view class='addIcon'>+</view>
+          </view>
+        </view>
+    </view>
+
+    <view class='msg f4'>联系人信息</view>
+     <view class='fault-wraper'>
+       <view  class='item-option'>
+          <!-- <text class='fl'>{{userName!=''?userName:'请输入联系人姓名'}}</text>
+          <text class='iconfont icon-gengduo fr'></text> -->
+            <text class="fl">姓名：</text>
+          <input name="name" maxlength="4" placeholder=" *请输入联系人姓名" class=' h8 f2' type="text" confirm-type="next" value="{{userName!=null?userName:''}}" placeholder-style="color:#e2e2e2;"></input>      
+       </view>
+       <view  class='item-option'>
+          <!-- <text class='fl'>{{tel!=''?tel:'请输入联系方式'}}</text>
+          <text class='iconfont icon-gengduo fr'></text> -->
+          <text class="fl">联系电话：</text>
+         <input name="tel" placeholder=" *请输入联系方式" class='h8 f2' type='text' value="{{tel!=undefined?tel:''}}" placeholder-style="color:#e2e2e2;" />
+       </view>
+       <view  class='item-option' bindtap='toAddress'>
+          <text class='fl'>{{address!=''?address:'请输入详细地址'}}</text>
+          <text class='iconfont icon-gengduo fr'></text>
+       </view>
+     </view>
+    <!-- <view class="section">
+      <input name="name" maxlength="4" placeholder=" *请输入联系人姓名" class=' h8 f2' type="text" confirm-type="next" />
+    </view>
+    <view name="mobile" class="section">
+      <input name="tel" class=' h8 f2' type="number" maxlength="11" placeholder="*请填写您的手机号" bindblur="mobileBlurFocus" />
+    </view>
+    <view class="section">
+      <input name="address" placeholder=" *请输入联系地址" class='h8 f2' type='text' />
+    </view> -->
+  </view>
+  <button class='submit' form-type="submit">提 交</button>
+</form>

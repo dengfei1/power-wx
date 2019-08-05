@@ -1,0 +1,204 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"uglifyFileName": false,
+		"coverView": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.0",
+	"appid": "wxaaef1b2a2d0681cf",
+	"projectname": "power-wx",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 20,
+			"list": [
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "启动",
+					"pathName": "pages/run/run",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "画圆",
+					"pathName": "pages/text/text",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "我的评价",
+					"pathName": "pages/home/assess/assess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "客户信息",
+					"pathName": "pages/user/customerMsg/customerMsg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "客户投诉",
+					"pathName": "pages/user/complaint/complaint",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "查看详情",
+					"pathName": "pages/user/complaint/details/details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "投诉类型",
+					"pathName": "pages/user/complaint/compType/compType",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "投诉内容",
+					"pathName": "pages/user/complaint/compDetails/compDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "更多设备",
+					"pathName": "pages/run/moreEquipment/moreEquipment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的设备",
+					"pathName": "pages/home/mySet/mySet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "设备信息",
+					"pathName": "pages/home/mySet/deviceDetails/deviceDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "服务支持",
+					"pathName": "pages/user/service/service",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的消息",
+					"pathName": "pages/home/myMsg/myMsg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "评价",
+					"pathName": "pages/home/assess/assess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设备报修",
+					"pathName": "pages/home/feSet/feSet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "测试",
+					"pathName": "pages/text/text",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "进度查询",
+					"pathName": "pages/home/progress/progress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "服务网点",
+					"pathName": "pages/home/touch/touch",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "省份",
+					"pathName": "pages/home/touch/provinces/provinces",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "待评价评价",
+					"pathName": "pages/home/assesDetails/assesDetails",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,57 @@
+<!--pages/user/detailMsg/detailMsg.wxml-->
+<view class='container  f3'>
+  <view class="swiper-list white">
+    <view class='fl list-left'>
+      头像
+    </view>
+    <view class='fr list-right'>
+      <view class='img'>
+         <image class="avatar" src='{{avatarUrl}}' style='width:100%;height:100%'></image>
+      </view>
+    </view>
+    <view class='cleaned'></view>
+  </view>
+  <view class="swiper-list white">
+    <view class='fl list-left'>
+      用户名
+    </view>
+    <view class='fr list-right2'>
+     <!-- {{nickName}} -->
+     {{realName}}
+      <text class='iconfont icon-gengduo fr'></text>
+    </view>
+    <view class='cleaned'></view>
+  </view>
+  <!-- <view class="swiper-list white">
+    <view class='fl list-left'>
+      性别
+    </view>
+    <view class='fr list-right2'>
+      {{gender}}
+      <text class='iconfont icon-gengduo fr'></text> -->
+      <!-- <text wx:if="a=='F'" class='iconfont icon-gengduo fr'>女</text>
+      <text wx:else>男</text> -->
+    <!-- </view>
+    <view class='cleaned'></view>
+  </view>
+  <view class="swiper-list1 white" bindtap=''>
+    <view class='fl list-left'>
+      修改地址信息
+    </view>
+    <view class='fr list-right1'  bindtap='changeAddress'>
+      <text class='iconfont icon-gengduo fr'></text>
+    </view>
+    <view class='cleaned'></view>
+    <view> {{address}}{{name}}</view>
+  </view>
+  <view class="swiper-list white">
+    <view class='fl list-left'>
+      修改手机
+    </view>
+    <view class='fr list-right1'>
+      <text class='iconfont icon-gengduo fr'></text>
+    </view>
+    <view class='cleaned'></view>
+  </view> -->
+
+</view>

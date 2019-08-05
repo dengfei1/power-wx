@@ -1,0 +1,10 @@
+/* pages/user/detailMsg/detailMsg.wxss */
+
+.swiper_con{margin-top: 10rpx;background: white;text-align: center; width: 100%;}
+.swiper-list{border-bottom: 1px solid #efefef;line-height: 90rpx;padding: 0 30rpx}
+.swiper-list1{margin-top: 20rpx;border-bottom: 1px solid #efefef;line-height: 90rpx;padding: 0 30rpx}
+.list-left{width:180rpx}
+.list-right{margin-right: 35rpx;color: #979797;width:180rpx}
+.img{width: 120rpx;height: 120rpx;border-radius: 50%;overflow: hidden;margin: 20rpx}
+.list-right1{color: #979797;width:60rpx}
+.list-right2{color:#979797;width:500rpx;text-align: right}

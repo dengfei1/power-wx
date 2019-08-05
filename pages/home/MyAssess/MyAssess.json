@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "stars": "/components/stars/stars"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的评价",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+ 
+}

@@ -1,0 +1,36 @@
+<view class='container'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+   <scroll-view scroll-y style="height: 600px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class="cont">
+      <!-- 列表 -->
+      <view wx:for="{{list}}" wx:key="index" class="list-item f3 h7 color" bindtap='bindUuid' data-index="{{index}}">
+        <!-- 滑动删除 -->
+        <!-- 列表图片 -->
+        
+
+        <view class='chakan fr f2' >确定</view>
+        <view class='item'>
+            <!-- 图片 -->
+            <view class='img fl bo'>
+                <image class='bo' src="{{item.img}}"></image>
+            </view>
+
+            <view class='left fl'>
+                  <view>设备编号：{{item.uuid}}</view>
+                  <view>机身编号：{{item.number}}</view>
+                  <view>产品类别：{{item.typeName}}</view>
+                  <!-- <view>产品系列：{{item.seriesName}}</view> -->
+                  <view>产品名称：{{item.name}}</view>
+                  <view>产品型号：{{item.markerName}}</view>
+                  <view>机型模式：{{item.patternName}}</view>
+            </view>
+         
+          
+        </view>
+      </view>
+      
+    </view>
+    </scroll-view>
+  </form>
+
+</view>

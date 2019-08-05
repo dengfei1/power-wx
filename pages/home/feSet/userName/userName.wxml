@@ -1,0 +1,15 @@
+  <view class='container'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class='header'>
+            <view class='cancel f3' bindtap='toFeSet'>取消</view>
+            <view class='preserve f3'>
+                <button class='but' form-type="submit">保存</button>
+            </view>
+      </view>
+      <view class='inp'>
+        <text class='name'>姓名:</text>
+        <input placeholder='姓名' name="userName"></input>
+      </view>
+        
+    </form>
+  </view>

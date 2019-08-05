@@ -1,0 +1,68 @@
+/* pages/user/complaint/complaint.wxss */
+.content{padding: 15rpx;position: relative;}
+.fr{vertical-align: middle;}
+.iconfont{ color: #0194dd;vertical-align: middle;}
+.icon-tianjia{font-size: 50rpx}
+.container{padding: 0 20rpx}
+.list{margin: 15rpx 0 35rpx 0;width:100%;overflow: hidden}
+.top{padding: 0 15rpx;}
+.detail{padding: 0 20rpx;}
+.title{color: white;width: 400rpx}
+.time{width: 150rpx;color: white;}
+
+.name{width: 67%;}
+.grade{width: 33%}
+/* 超出省略 */
+.word{ width: 645rpx; overflow: hidden;white-space:nowrap;text-overflow: ellipsis;}
+.mask {
+  /* text-align: center; */
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  top: 0;
+  left: 0;
+  padding: 0 20rpx;
+}
+.box {
+  margin: 20rpx;
+  width: 630rpx;
+  padding: 20rpx;
+}
+/* 查看详情 */
+/* .masked { */
+  /* text-align: center; */
+  /* height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  top: 0;
+  left: 0;
+  padding: 0 20rpx;
+}
+.boxed {
+  background: white;
+ 
+  margin: 20rpx;
+  width: 630rpx;
+  padding: 20rpx;
+ 
+} */
+.icon-shanchu {
+  top: -25rpx;
+  right: -1rpx;
+
+}
+
+/* 图标更多 */
+.genduo{
+  display: inline-block;
+  font-size: 40rpx;
+  position: absolute;
+  top:10rpx;
+  right: 10rpx;
+  color: #333;
+  width: 100rpx;
+}

@@ -1,0 +1,2 @@
+.container{padding: 0 20rpx}
+.detail{padding: 20rpx 20rpx;height: 400rpx;overflow: hidden;font-size: 28rpx;}

@@ -1,0 +1,70 @@
+<!--pages/home/myBad/myBad.wxml-->
+<import src="../../../wxParse/wxParse.wxml"/> 
+<view class='container f1 h6' id='myBad'>
+<!-- 未处理-->
+  <view class='list bo white' wx:for="{{dataArr3}}" data-index="{{index}}" wx:key="{{index}}" bindtap="bindShow">
+    <view class='top' style='background:{{item.background}};color:#fff'>
+      <view class='title fl'>设备编号：{{item.uuid}}</view>
+      <view class='time fr '>{{item.startTime}}</view>
+      <view class='cleaned'></view>
+    </view>
+    <view class='detail' style='color:{{item.color}}'>
+      <view class='name '>故障名称：{{item.name}}</view>
+      <view class='grade fl'>故障等级：{{item.rank}}</view>
+      <view class='code'>故障代码：{{item.code}}</view>
+      <view class='cleaned'></view>
+      <view class='code'>故障描述：{{item.message}}</view>
+      <!-- <view class='suggest'>处理意见：<template is="wxParse" data="{{wxParseData:htmlAry[index].nodes}}" /></view> -->
+      <view class='chakan iconfont icon-icon-chakanxq fr f4' bindtap='deviceDetails' data-index="{{index}}"></view>
+    </view>
+  </view>
+  <!-- 已报修 -->
+   <!-- <view class='list bo white' wx:for="{{dataArr2}}" data-index="{{index}}" bindtap="bindShow">
+    <view class='top' style='background:{{item.background}};color:#fff'>
+      <view class='title fl'>{{item.pname}}</view>
+      <view class='time fr'>{{item.startTime}}</view>
+      <view class='cleaned'></view>
+    </view>
+    <view class='detail' style='color:{{item.color}}'>
+      <view class='name '>设备名称：{{item.name}}</view>
+      <view class='grade fl'>故障等级：{{item.rank}}</view>
+      <view class='code'>故障代码：{{item.code}}</view>
+      <view class='cleaned'></view>
+      <view class='code'>故障描述：{{item.code}}</view>
+      <view class='suggest'>处理意见：{{item.manage}}</view>
+    </view>
+  </view> -->
+  <!-- 已确认 -->
+   <view class='list bo white' wx:for="{{dataArr1}}" data-index="{{index}}" bindtap="bindShow">
+    <view class='top' style='background:{{item.background}};color:#fff'>
+      <view class='title fl '>{{item.uuid}}</view>
+      <view class='time fr'>{{item.startTime}}</view>
+      <view class='cleaned'></view>
+    </view>
+     <view class='detail' style='color:{{item.color}}'>
+      <view class='name '>故障名称：{{item.name}}</view>
+      <view class='grade fl'>故障等级：{{item.rank}}</view>
+      <view class='code'>故障代码：{{item.code}}</view>
+      <view class='cleaned'></view>
+      <view class='code'>故障描述：{{item.message}}</view>
+      <!-- <view class='suggest'>处理意见：<template is="wxParse" data="{{wxParseData:htmlAry[index].nodes}}" /></view> -->
+      <view class='chakan iconfont icon-icon-chakanxq1-copy fr f4' bindtap='deviceDetails' data-index="{{index}}"></view>
+    </view>
+  </view>
+
+  <view class="mask" wx:if="{{isShow}}">
+    <view class="wraper white">
+      <view class='detail-mask'>
+        <view class='name '>故障名称：{{objData.name}}</view>
+        <view class='grade fl'>故障等级：{{objData.rank}}</view>
+        <view class='code'>故障代码：{{objData.code}}</view>
+        <view class='cleaned'></view>
+        <view class='code'>故障描述：{{objData.message}}</view>
+        <view class='suggest'>处理意见：<template is="wxParse" data="{{wxParseData:article.nodes}}" /></view>
+        <view class="confirm" bindtap="confirm">确认告警</view>
+      </view>
+       <!-- 取消 -->
+      <text class='iconfont icon-shanchu  cancel' bindtap='bindCancel'></text>
+    </view>
+  </view>
+</view>

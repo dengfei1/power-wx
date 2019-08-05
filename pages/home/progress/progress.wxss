@@ -1,0 +1,145 @@
+page{
+   height: 100%;
+}
+.container{
+  padding: 20rpx 10rpx;
+  width: 97%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* 设备信息 */
+.list{
+  margin-bottom: 20rpx;
+  border-radius: 15rpx;
+  
+}
+.itme-top{
+  width: 100%;
+  border-bottom:1px solid #cfcfcf;
+  padding: 15rpx 10rpx;
+}
+.handle{
+  padding:0rpx 20rpx;
+  border-radius: 60rpx;
+  background: #0193d9;
+  color: #fff;
+  margin-right: 30rpx;
+  font-size: 25rpx;
+  text-align: center;
+  height: 44rpx;
+  line-height: 44rpx;
+}
+.header-content{
+  padding: 15rpx 10rpx;
+  position: relative;
+  font-size: 28rpx;
+  color: #999999;
+}
+.header-content>view{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.triangle{
+  position: absolute;
+  bottom: 20rpx;
+  right: 50rpx;
+  font-size: 45rpx;
+  color: #000;
+  
+}
+.tf180{
+  transform: rotate(180deg);
+}
+.ff0{
+   transform: rotate(0deg);
+}
+/* 维修进度 */
+.work-process{
+  height: 850rpx;
+  margin-top: 20rpx;
+
+  box-sizing: border-box;
+  display: flex;
+}
+.times{
+  flex:0 0 100rpx;
+  /* border: 1px solid red;  */
+  text-align: center; 
+  margin-top: 46rpx;
+}
+.time{
+  width: 100rpx;
+  height: 72rpx;
+  margin-bottom: 158rpx;
+}
+.process_wrap{
+  flex:0 0 70rpx;
+  /* border: 1px solid red;  */
+  justify-content: row;
+  align-items: center;
+}
+.process_line{
+  background:#999999;
+  width: 2rpx;
+  height: 35rpx;
+  margin: 0 auto;
+}
+.process_node{
+   width: 70rpx;
+   height: 70rpx;
+   border-radius: 50%;
+   border: 1px solid #999999;
+   text-align: center;
+   /* background: #ff670b; */
+}
+.process_icon{
+   width: 50rpx;
+   height: 50rpx;
+   border-radius: 50%;
+   margin: 11rpx auto;
+   font-size: 40rpx;
+   /* color: #fff; */
+}
+
+.process_node1{
+   width: 20rpx;
+   height: 20rpx;
+   border-radius: 50%;
+   border:1px solid #999999;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+}
+.process_circle{
+   width: 10rpx;
+   height: 10rpx;
+   border-radius: 50%;
+   background: #999999;
+   margin:0 auto;
+}
+.process-right{
+  flex:1 0 300rpx;
+  /* border: 1px solid red;  */
+  margin-top: 46rpx;
+  padding-left: 20rpx;
+}
+.right-item{
+  height: 90rpx;
+  margin-bottom: 25rpx;
+}
+.item-text{
+  width: 500rpx;
+  font-size: 20rpx;
+  display: box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  line-height: 26rpx;
+
+}
+.item-text1{
+  padding-top: 10rpx;
+}

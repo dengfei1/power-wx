@@ -1,0 +1,28 @@
+page{
+  background: #fff;
+}
+.container{
+  width: 95%;
+  margin:0 auto;
+}
+.title{
+  text-align: center;
+  
+}
+.title1{
+  font-weight: 700;
+  color: #000;
+
+}
+.content{
+ padding: 0 10rpx;
+ height: 30rpx;
+ line-height: 30rpx; 
+ text-indent: 2em; 
+}
+.title2 {
+  color: #333;
+}
+.text{
+  margin-bottom: 30rpx;
+}

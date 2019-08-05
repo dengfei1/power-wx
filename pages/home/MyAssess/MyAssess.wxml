@@ -1,0 +1,110 @@
+<view class='container f3'>
+   <!-- 我的评价 -->
+          <view class='assess white bo'>
+              <view class='user fl'>
+                <view class='userinfo'>
+                  <view class='userImg'>
+                    <open-data class="wxImg" type="userAvatarUrl"></open-data>
+                  </view>
+                  <view class='userName'>
+                      <open-data type="userNickName"></open-data>
+                  </view>
+                  </view>
+                </view>
+                <view class='all fl h8'>
+                  <view class='allTit color'>全部评价</view>
+                  <view class='allCont'>{{assessNumArr.allNum==""?0:assessNumArr.allNum}}</view>
+                </view>
+                <!-- <view class='img fl h8'>
+                  <view class='imgTit color'>有图评价</view>
+                  <view class='imgCont'>{{assessNumArr.imgNum}}</view>
+                </view> -->
+                <view class='cleaned'></view>
+            </view>
+
+          <view class='bottomSwiper'>
+            <view class='tabled'>
+              <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>待评价({{assessNumArr.noPjNum==""?0:assessNumArr.noPjNum}})</view>
+              <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>已评价（{{assessNumArr.pjNum==""?0:assessNumArr.pjNum}}）</view>
+            </view>
+            <swiper current="{{currentData}}" class='swiper' style="height:800rpx" duration="300" bindchange="bindchange">
+              <!-- 待评价 -->
+              <view class='swiperItem'>
+                <swiper-item>
+                 <scroll-view scroll-y="true"  style="height: 100%;" bindscrolltolower="lower">
+                  <view class='listed white' wx:for="{{toBe}}" wx:key="key">
+                    <view class='fl named h7'>{{item.faultType}}</view>
+                    <view class=' fr toBeAss h7'>待评价</view>
+                    <view class='cleaned'></view>
+                    <view class='conntented'>
+                      <view class='image fl bo'>
+                        <image src='{{item.img}}'></image>
+                      </view>
+                      <view class='setTime f1 color  h6'>
+                        <view>报修时间：{{item.createtime}}</view>
+                        <view>维修时间：{{item.wxTime}}</view>
+                        <view>处理结果：{{conclusion[item.conclusion]}}</view>
+                      </view>
+                      <view class='cleaned'></view>
+                      <view class='assessed fr h3 dis' bindtap='toAssess' data-index="{{index}}">评价</view>
+                      <view class='mored fr h3 dis' bindtap='lookDel' data-index='{{index}}'>查看详情</view>
+                      <view class='cleaned'></view>
+                    </view>
+                  </view>
+                  </scroll-view>
+                </swiper-item>
+                <!-- 已评价 -->
+                <swiper-item>
+                 <scroll-view scroll-y="true" style="height: 100%;">
+                  <view class='box white h4 bo' wx:for="{{hadAss}}" wx:key="{{index}}">
+                    <view class='userImg fl'>
+                      <open-data class="wxImg" type="userAvatarUrl"></open-data>
+                    </view>
+                    <view class='fr box-right'>
+                      <view class='userName fl'>
+                        <view class='userNickName'><open-data type="userNickName"></open-data></view>
+                        <view class='service f2'>服务</view>
+                       <!--小星星 -->
+                      <view class='star-wraper'>
+                        
+                          <view class='star te-al'>   
+                                <view class='stars'>
+                                  <view class='contents'>
+                                    <view wx:for="{{stars}}" wx:key="{{index}}" style='background:url("{{item.flag==1?item.bgImg:item.bgfImg}}") no-repeat top; background-size:100%;width:30rpx'  name='star' ></view>
+                                  </view>
+                                </view>
+                          </view>
+
+                       </view>
+                      </view>
+                      <view class='cleaned'></view>
+                      <view class='comment'>
+                        {{item.conclusion}}
+                      </view>
+                      <view class='time'>{{item.wxTime}}</view>
+                      <view class='label color f2 iconfont icon-biaoqian'>{{item.specialty}}</view>
+                      <view class='boxDetail dis' bindtap='lookDel' data-index='{{index}}'>
+                        <view class='imgUrl fl dis'>
+                          <image src="{{item.img}}" class='dis imgUrl1' width="100rpx" style='height:100rpx'></image>
+                        </view>
+                        <view class='fl boxName f2'> {{item.pname}}</view>
+                        <view class='fr iconfont icon-gengduo h10'></view>
+                      </view>
+                      <view class='cleaned'></view>
+                      <!-- <view class='assessed fr h3 dis'>
+                        <button class='assessed fr h3 dis' open-type="share" data-name="pageShare" id="share">分享评价</button>
+                      </view> -->
+                      <button class='assessed fr  dis' open-type="share" data-name="pageShare" id="share" data-index="{{index}}">分享评价</button>
+                      <view class='mored fr h3 dis' bindtap='delate' data-index="{{index}}">删除评价</view>
+                      <view class='cleaned'></view>
+                    </view>
+                    <view class='cleaned'></view>
+                  </view>
+                  </scroll-view>
+                </swiper-item>
+              </view>
+              <!-- 已评价结束 -->
+            </swiper>
+    </view>
+
+</view>

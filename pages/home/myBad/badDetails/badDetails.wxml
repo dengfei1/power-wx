@@ -1,0 +1,9 @@
+<view class="container">
+    <view class='detail' style='color:{{item.color}}'>
+      <view class='name '>设备名称：{{item.name}}</view>
+      <view class='grade '>故障等级：{{item.rank}}</view>
+      <view class='cleaned'></view>
+      <view class='code'>故障描述：{{item.code}}</view>
+      <view class='suggest'>处理意见：{{item.manage}}</view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+.list{
+   padding: 0 30rpx;
+}
+.item{
+  border-bottom:1px solid #cdcdcd;
+  padding:0 20rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin:0 auto;
+}

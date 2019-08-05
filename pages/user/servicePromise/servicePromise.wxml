@@ -1,0 +1,21 @@
+<view class='container'>
+   <view class='title f4'>派沃服务承诺</view>
+   <view class='item f3'>
+      <view class='item-title'>一、随时听候</view>
+      <view class='text'>全年365天24小时随时听候您的召唤，为用户提供报修及咨询等服务            </view>
+   </view>
+   <view class='item f3'>
+      <view class='item-title'>二、上门服务</view>
+      <view class='text'>30分钟内响应预约上门服务</view>
+   </view>
+   <view class='item f3'>
+      <view class='item-title'>三、服务到位</view>
+      <view class='text'>市区12小时内服务到位，市效24小时内服务到位，远效48小时内服务到位,
+      </view>
+   </view>
+
+   <view class='service' >
+     <view>全球统一服务热线</view>
+     <view class='phone' bindtap='callMerchant'>400-687-8233</view>
+   </view>  
+</view>

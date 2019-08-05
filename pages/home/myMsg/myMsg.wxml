@@ -1,0 +1,64 @@
+<!--pages/home/myMsg/myMsg.wxml-->
+<view class='container f3' id='myMsg'>
+<import src="../../../wxParse/wxParse.wxml"/> 
+  <view class='topTabSwiper'>
+    <swiper current="{{currentData}}" class='swiper' style="height:1200rpx;" duration="300" bindchange="bindchange">
+      <!-- 我的消息-->
+      <view class='swiperList ' >
+        <swiper-item>
+         <scroll-view scroll-y style="height:100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+         
+          <view class='list h8' wx:for="{{dataArr}}" wx:key="{{index}}">
+            <view class='te-al'>
+              <text class='time f2'>{{item.timeItem}}</text>
+            </view>
+            <view class='content white bo'>
+              <view class='title f4'>{{item.title}}</view>
+              <view class='main color'>
+                 <!-- <block wx:for="{{artileList}}" wx:key="item" wx:for-item="item" wx:for-index="idx">
+        
+                       <template is="wxParse" data="{{wxParseData:item}}"/>
+ 
+                 </block> -->
+                <template is="wxParse" data="{{wxParseData:htmlAry[index].nodes}}" />
+              </view>
+              <view class='more' bindtap='more' data-index="{{index}}">查看详情</view>
+            </view>
+          </view>
+          
+          </scroll-view>
+        </swiper-item>
+        <!-- 我的消息 -->
+       
+      </view>
+
+     </swiper>
+  </view>
+
+  <!-- 信息公告查看详情 -->
+  <view class='mask moreDetail' wx:if='{{isHide}}'>
+    <view class='boxed white bo rela' wx:for='{{moreDetail}}' wx:key="{{index}}">
+      <text class='iconfont icon-shanchu abso' bindtap='back1'></text>
+      <view class='title f4'>{{item.title}}</view>
+      <view class='subtitle'>
+        <text class='time1'>发布时间:{{item.startTime}}</text>
+        <text class='userName'>发布人:{{item.userName}}</text>
+      </view>
+      <view class='text'><template is="wxParse" data="{{wxParseData:content.nodes}}"/></view>
+    </view>
+  </view>
+  <!-- 查看详情结束 -->
+  <!-- 评价详情 -->
+  <view class='mask lookDel' wx:if='{{isHided}}'>
+    <view class='detailBox rela bo white'>
+    <view class='iconfont icon-shanchu abso' bindtap='back'></view>
+      <view class='detailTitle'></view>
+      <view class='detailStar'></view>
+      <view class='detailWord'></view>
+      <view></view>
+      <view></view>
+    </view>
+  </view>
+  <!-- 评价详情结束 -->
+
+</view>

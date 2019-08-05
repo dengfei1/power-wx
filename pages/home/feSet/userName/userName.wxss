@@ -1,0 +1,45 @@
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.cancel{
+  width: 150rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  justify-content: center;
+  color:#333;
+  font-size: 35rpx;
+}
+/* 按钮 */
+.but{
+  background: #fff;
+  outline: none;
+  line-height: 70rpx;
+  text-align: center;
+  justify-content: center;
+  font-size: 35rpx;
+  color: #333;
+}
+ button::after{
+    border:none;
+}
+.inp{
+  padding: 0 30rpx;
+  position: relative;
+}
+input{
+  border-bottom: 1px solid #00bb00;
+  margin:0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 10rpx 0 90rpx;
+  margin-top: 18rpx;
+}
+.name{
+  position: absolute;
+  bottom: 20rpx;
+  left: 30rpx;
+}

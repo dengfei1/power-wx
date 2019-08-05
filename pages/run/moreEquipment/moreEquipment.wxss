@@ -1,0 +1,36 @@
+page{
+ background: #fff;
+}
+/* 设备提示 */
+.tips{
+  width: 100%;
+  background: #efefef;
+  padding-left: 35rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #a7a6ab;
+}
+
+.list-item{
+  width: 90%;
+  border-bottom:1px solid #ccc;
+  margin: 0 auto;
+  padding: 20rpx 0;
+  display: flex;
+  flex-wrap:wrap;
+}
+.item{
+  display: inline-block;
+  line-height: 50rpx;
+   
+}
+.item:last-child{
+  width: 100%;
+}
+.item1{
+  width: 57%;
+}
+.item:nth-child(2n){
+  padding-left: 20rpx;
+  width: 40%;
+}

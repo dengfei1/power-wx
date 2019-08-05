@@ -1,0 +1,78 @@
+<view class='container'>
+    <view class='header f3 white'>
+        <text>报修单号:{{objBe.bxNumber}}</text>
+        <text class='fr'>已处理</text>
+    </view>
+    <view class='centent  white'>
+        <view class='itme item-border'>
+          <text>报修日期:</text>
+          <text class='itme-right '>{{createtime}}</text>
+        </view>
+        <view class='itme'>
+          <text>成品名称:</text>
+          <text class='itme-right'>{{objBe.name}}</text>
+        </view>
+        <view class='itme item-border'>
+          <text>设备编号:</text>
+          <text class='itme-right '>{{objBe.uuid}}</text>
+        </view>
+        <view class='itme'>
+          <text>产品型号:</text>
+          <text class='itme-right'>{{objBe.markerName}}</text>
+        </view>
+        <view class='faultDescribe'>
+          <text>故障描述: {{objBe.faultType}}</text>
+        </view>
+        <view class='faultImg'>
+            <view class='title'>故障图片:</view>
+            <view class='img'><images src="{{objBe.img[0]}}"></images></view>
+            <view class='img'><images src="{{objBe.img[1]}}"></images></view>
+            <view class='img'><images src="{{objBe.img[2]}}"></images></view>
+        </view>
+        <view class='itme item-border'>
+          <text>客户姓名：</text>
+          <text class='itme-right '>{{objBe.clientName}}</text>
+        </view>
+         <view class='itme'>
+          <text>联系电话</text>
+          <text class='itme-right'>{{objBe.clientPhone}}</text>
+        </view>
+         <view class='faultDescribe'>
+          <text>联系地址:{{objBe.clientAddress}}</text>
+        </view>
+    </view>
+
+    <view class='centen-bottom  white' >
+      <view class='service '>
+          <text>服务商:{{objBe.fwsName}}</text>
+      </view>
+      <view class='itme item-border'>
+          <text>派单时间:{{pdTime
+}}</text>
+          <text class='itme-right'></text>
+      </view>
+      <view class='itme'>
+          <text>接单时间:{{jdTime}}</text>
+          <text class='itme-right'></text>
+      </view>
+      <view class='itme item-border'>
+          <text>售后工程师:{{objBe.wxUser}}</text>
+          <text class='itme-right '></text>
+      </view>
+      <view class='itme'>
+          <text>工号：{{objBe.jdNumber}}</text>
+          <text class='itme-right'></text>
+      </view>
+       <view class='contact '>
+          <text>联系方式:{{objBe.jdPhone}}</text>
+      </view>
+       <view class='itme item-border'>
+          <text>维修结论:</text>
+          <text class='itme-right '>{{objBe.conclusion}}</text>
+      </view>
+      <view class='itme'>
+          <text>维修时间:{{wxTime}}</text>
+          <text class='itme-right'></text>
+      </view>
+    </view>
+</view>

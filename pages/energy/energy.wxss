@@ -1,0 +1,47 @@
+/* pages/energy/energy.wxss */
+.tab{float: left;text-align: center;padding: 10rpx 0; width: 33.3%;line-height: 70rpx;background: white}
+.topTabSwiper{border-top: 1px solid white; zoom: 1;}
+.topTabSwiper:after{content: ""; clear: both;display: block;}
+.tabBorer{color: #fc9366;width: 33.3%}
+.table{width: 750rpx;z-index: 99}
+.swiper{width: 100%;}
+.swiperList{margin-top: 100rpx}
+.name{padding: 10rpx 20rpx}
+.canvasBox{margin: 15rpx;border-radius: 15rpx}
+.canvas{width: 700rpx;height: 400rpx;transform: scale(0.9)}
+/* 数据查询 */
+.select{margin: 15rpx}
+.picker{width: 655rpx;line-height: 60rpx;border: 1px solid #cdcdcd;height: 96%;margin: 30rpx}
+
+
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+

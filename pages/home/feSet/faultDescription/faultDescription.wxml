@@ -1,0 +1,13 @@
+<view class='container'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+     <view class='header'>
+          <view class='cancel f3' bindtap='toFeSet'>取消</view>
+          <view class='preserve f3'>
+              <button class='but' form-type="submit">保存</button>
+          </view>
+    </view>
+    <view class='textarea white'>
+      <textarea name="textarea" bindblur="bindTextAreaBlur" auto-height placeholder="*请详细描述设备故障" />
+    </view>
+  </form>   
+</view>

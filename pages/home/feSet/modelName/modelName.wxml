@@ -1,0 +1,8 @@
+<view class='container'>
+    <view class='list' wx:for="{{list}}">
+       <view class='item f3' bindtap='toFeSet' data-index='{{index}}'>
+          <text>{{item.name}}</text>
+          <text class='iconfont icon-gengduo fr'></text>
+       </view>
+    </view>
+</view>

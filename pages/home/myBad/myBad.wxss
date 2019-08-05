@@ -1,0 +1,69 @@
+/* pages/home/myBad/myBad.wxss */
+@import "../../../wxParse/wxParse.wxss";
+.container{padding: 0 20rpx}
+.list{margin: 15rpx 0 35rpx 0;color: #ee8308a9;width:100%;overflow: hidden}
+.top{padding: 0 15rpx;height:80rpx;line-height: 80rpx;}
+.detail{padding: 20rpx 20rpx;height: 179rpx;overflow: hidden;font-size: 28rpx;position: relative;}
+.title,.time{font-size: 28rpx;}
+.name{width: 67%;}
+.grade{width: 33%;margin-right: 50rpx;}
+
+
+.mask{
+  background: rgba(0, 0, 0, .2);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+}
+
+.wraper{
+  width: 90%;
+  margin: 150rpx auto 300rpx auto;
+  border-radius: 15rpx;
+  position: relative;
+}
+
+.detail-mask{
+  height: 800rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  position: relative;
+  padding: 30rpx 30rpx;
+}
+
+/* 查看设备详情 */
+.chakan{
+  width: 40rpx;
+  height: 56rpx;
+  font-size: 40rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 15rpx;
+  border-radius: 10rpx;
+}
+
+.confirm{
+  width: 120rpx;
+  padding: 10rpx 20rpx;
+  position: absolute;
+  bottom: 40rpx;
+  left: 50%;
+  margin-left: -70rpx;
+  background: #2b72bf;
+  color: #fff;
+  border-radius: 15rpx;
+  text-align: center;
+}
+
+/* 取消 */
+.cancel{
+  position: absolute;
+  top: -4rpx;
+  right: 7rpx;
+  font-size: 40rpx;
+}

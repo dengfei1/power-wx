@@ -1,0 +1,13 @@
+<!--pages/user/our/our.wxml-->
+
+
+<view class='container te-al h6 rela'>
+      <view class='logo te-al'><image src='/images/logo.png' style='width:250rpx;height:230rpx'></image></view>
+      <view class='name'>派沃会员</view>
+      <view class='comp abso te-al f2'>
+          <view class='type'>版本1.0.0</view>
+          <view class='compony '>Copyright ©  2018-2019  </view>
+          <view class='compony '>深圳市派沃新能源科技股份有限公司 </view>
+            <view class='compony '>powered by 元泓星辰</view>
+      </view>
+</view>

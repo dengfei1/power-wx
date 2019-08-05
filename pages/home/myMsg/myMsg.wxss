@@ -1,0 +1,262 @@
+/* pages/home/myMsg/myMsg.wxss */
+@import "../../../wxParse/wxParse.wxss";
+/* 切换按钮 */
+
+.tab {
+  float: left;
+  text-align: center;
+  padding: 10rpx 0;
+  width: 50%;
+  line-height: 70rpx;
+  background: white;
+}
+
+.topTabSwiper {
+  /* border-top: 1px solid #ccc; */
+  zoom: 1;
+}
+
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tabBorer {
+  color: #fc9366;
+  width: 50%;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.table {
+  width: 750rpx;
+  z-index: 99;
+}
+
+
+
+/* 切换1 */
+
+.tab1 {
+  float: left;
+  text-align: center;
+  padding: 10rpx 0;
+  width: 50%;
+  line-height: 70rpx;
+}
+
+.bottomSwiper {
+  zoom: 1;
+}
+
+.bottomSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tabBorer1 {
+  color: #fc9366;
+  width: 50%;
+}
+
+.swiper1 {
+  width: 100%;
+}
+
+/* 信息公告 */
+
+/* 内容 */
+
+.list {
+  margin: 10rpx 30rpx;
+}
+
+.content {
+  padding: 20rpx;
+}
+
+.time {
+  background: #c1bfc0;
+  color: white;
+  padding: 5rpx 15rpx;
+  border-radius: 5rpx;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.main {
+  border-bottom: 1px solid #cdcdcd;
+  height: 80rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 我的评价 */
+
+.tabled {
+  width: 750rpx;
+  z-index: 9999;
+  top: 300rpx;
+}
+
+.swiperItem {
+  top: 400rpx;
+}
+
+.assess {
+  margin: 20rpx 40rpx;
+  padding: 15rpx 20rpx;
+  text-align: center;
+  width: 620rpx;
+}
+
+.user {
+  width: 30%;
+}
+
+.all {
+  width: 30%;
+}
+
+.img {
+  width: 30%;
+}
+
+.userImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 30rpx;
+}
+
+.wxImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+/* 待评价 */
+
+.bottomSwiper {
+  padding: 0 30rpx;
+}
+
+.listed {
+  border: 1px solid #efefef;
+  border-radius: 15rpx;
+  padding: 0 20rpx 20rpx 20rpx;
+  margin-bottom: 15rpx;
+}
+
+.conntented {
+  border-top: 1px solid #cdcdcd;
+}
+
+.image {
+  width: 130rpx;
+  height: 130rpx;
+  margin: 20rpx 10rpx 0 0;
+  background: #cdcdcd;
+}
+
+.mored {
+  width: 120rpx;
+  padding: 10rpx 20rpx;
+  border: #cdcdcd 1px solid;
+  border-radius: 30rpx;
+  text-align: center;
+  margin-right: 10rpx;
+}
+
+.assessed {
+  width: 120rpx;
+  padding: 10rpx 20rpx;
+  border: #fc9366 1px solid;
+  border-radius: 30rpx;
+  color: #fc9366;
+  text-align: center;
+}
+
+/* 已评价 */
+
+.box {
+  padding: 15rpx 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.box-right {
+  width: 490rpx;
+}
+
+.userImg {
+  width: 100rpx;
+}
+
+.boxDetail {
+  width: 96%;
+  background: #eee;
+  padding: 10rpx;
+}
+
+.boxName {
+  width: 300rpx;
+}
+
+.imgUrl1 {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/* 查看详情 */
+
+.mask {
+  /* text-align: center; */
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  top: 0;
+  left: 0;
+  padding: 0 20rpx;
+}
+.title{text-align: center;}
+
+.subtitle{
+  line-height: 60rpx;
+}
+
+.userName{
+  margin-left: 20rpx;
+}
+
+
+.boxed {
+  margin: 20rpx;
+  width: 630rpx;
+  padding: 20rpx;
+  min-height: 1000rpx;
+}
+
+.icon-shanchu {
+  top: 0rpx;
+  right: 4rpx;
+  z-index: 100;
+  position: absolute;
+}
+
+.imaged{width: 96%;height: 300rpx;margin: 10rpx auto;background: pink}
+/* 评价查看详情 */
+.detailBox{
+  margin: 100rpx 20rpx;
+  width: 630rpx;
+  padding: 20rpx;
+
+}

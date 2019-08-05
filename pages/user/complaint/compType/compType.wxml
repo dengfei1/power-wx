@@ -1,0 +1,18 @@
+<!-- 投诉类型 -->
+<view class='container'>
+   <view class='title f4'>请选择投诉类类别:</view>
+   <view class='list white'>
+      <view class='item white' bindtap='toDetails'>
+          <text class='item-text'>产品投诉</text>
+          <text class='iconfont icon-gengduo fr'></text>
+      </view>
+       <view class='item white'>
+          <text class='item-text'>服务投诉</text>
+          <text class='iconfont icon-gengduo fr'></text>
+      </view>
+       <view class='item white'>
+          <text class='item-text'>维修投诉</text>
+          <text class='iconfont icon-gengduo fr'></text>
+      </view>
+  </view>
+</view>

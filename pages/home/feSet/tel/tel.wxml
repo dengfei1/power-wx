@@ -1,0 +1,15 @@
+  <view class='container'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class='header'>
+            <view class='cancel f3' bindtap='toFeSet'>取消</view>
+            <view class='preserve f3'>
+                <button class='but' form-type="submit">保存</button>
+            </view>
+      </view>
+      <view class='inp'>
+        <text class='tel'>手机号码:</text>
+        <input placeholder='请输入手机号' name="tel" type="number"></input>
+      </view>
+        
+    </form>
+  </view>

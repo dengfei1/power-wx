@@ -1,0 +1,223 @@
+/* pages/run/run.wxss */
+
+.top{width:100%;line-height: 90rpx;background: #0194dd;color: white;text-align: center;position: relative;font-weight: bold;top: 0;right: 0;left: 0;}
+.icon-zhuxingtu{color: #fc9366;margin-left: 10rpx}
+.pdt-sel{position: absolute;right: 50rpx;font-size: 32rpx;top:0}
+.pageCut{width: 750rpx;top: 90rpx;}
+.product{width: 370rpx;text-overflow: ellipsis;white-space: nowrap}
+/* 切换按钮 */
+.tab{float: left;text-align: center;padding: 10rpx 0; width: 50%;line-height: 70rpx;background: white}
+.topTabSwiper{border-top: 1px solid #ccc; zoom: 1;}
+.topTabSwiper:after{content: ""; clear: both;display: block;}
+.tabBorer{color: #fc9366;width: 50%}
+.swiper{width: 100%;}
+
+/* 运行状态 */
+.swiper_con{margin-top: 10rpx;text-align: center; width: 100%;height: 100%;}
+.swiper-list{border-bottom: 1px solid #efefef;line-height: 90rpx;margin: 0 15rpx;}
+.list-left{margin-left: 35rpx}
+.list-right{margin-right: 35rpx;color: #979797}
+
+/* 参数设置 */
+.parameter1{padding-top: 15rpx}
+.picker1{width: 174rpx;border-radius: 15rpx;}
+.picker{width: 526rpx;border-radius: 15rpx;border: 1rpx solid #979797;margin-bottom: 20rpx;padding-left: 40rpx;}
+.mode-set{width:330rpx;text-align:center;}
+.onTime-sel{padding: 15rpx 32rpx;text-align: center;margin: 0 15rpx 20rpx 15rpx;border-radius: 15rpx}
+.water{width:100%;margin-top:18rpx;}
+.time-set{width: 100rpx;margin-top:10rpx;margin-right: 40rpx}
+.comfig{width: 180rpx;margin-top: 80rpx}
+.icon-tianjia{font-size: 40rpx ;color:#fc9366;margin-right: 30rpx}
+.line{width: 87rpx;text-align: center;line-height: 106rpx}
+.onTime{margin-bottom: 150rpx}
+.time{width: 80rpx}
+.left{width: 420rpx}
+/* 提交 */
+
+.submit1{background: #0194dd;margin: 30rpx;font-weight: bold;color: white}
+
+/* 切换设备 */
+.more{width: 100%;height: 100%;background: rgba(0, 0, 0, 0.2);position: fixed;top: 0;left: 0;right:0;z-index: 999;bottom: 0}
+.change{background: white;margin: 100rpx;border-radius: 15rpx}
+.proList{padding: 20rpx 50rpx;border-bottom: 1px solid #cdcdcd}
+.icon-shanchu{right: 15rpx;top:0rpx;font-size: 42rpx}
+
+
+/* 温度弹出框 */
+.mask{
+    z-index:99999999999;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.2);
+    position:fixed;
+}
+.box{background: white;border-radius: 15rpx;height: 700rpx;width: 750rpx;position: absolute;bottom: 0}
+.name{padding: 10rpx 20rpx}
+
+.scoll-h{overflow: auto;height: 600rpx;}
+.sure{width: 170rpx}
+/*模态框*/
+.modals{position:fixed; z-index: 999; top:0; left: 0; right:0; bottom: 0;}
+.modals-cancel{position:absolute; z-index:1000; top:0; left: 0; right:0; bottom: 0; background-color: rgba(0,0,0,.5);}
+.bottom-dialog-body{position:absolute; z-index:10001; bottom:0; left:0; right:0; padding:30rpx; height:500rpx; background-color: #fff;}
+.canvas{position:absolute;top:135rpx; z-index:100001;width: 1400rpx;height: 400rpx;transform: scale(0.9)}
+/*动画前初始位置*/
+.bottom-pos{-webkit-transform:translateY(100%);transform:translateY(100%);}
+
+/* 系统定时
+.systemTiem{
+  display:flex;
+  width: 100%;
+  height: 64rpx;
+  line-height: 64rpx;
+  background:#eae9e9;
+  font-size: 25rpx;
+  text-align: right;
+  margin-left: 25rpx;
+  }
+.sytiem{
+  justify-content: flex-start;
+  margin:0 12rpx 0  31rpx ;
+  font-size: 32rpx
+  }
+.list{
+  background: #eae9e9;
+}
+.list-itme{
+  padding: 20rpx 31rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.item-content{
+  display: inline-block; 
+  border: 1rpx solid #979797;
+  border-radius: 15rpx;
+  width: 315rpx;
+}
+picker{
+  line-height: 60rpx;
+}
+.modeSetting,.tempSetting,.textCenten,.time{
+  float: left;
+  margin-left: 34rpx;
+}
+.rig{
+  float: right;
+  margin-right: 30rpx;
+}
+.lef{
+  float: left;
+  margin-left: 30rpx;
+}
+.waterSeting{
+  display:block;
+  width: 660rpx;
+  border: 1rpx solid #979797;
+  border-radius: 15rpx;
+  margin-top: 15rpx;
+}
+.line{
+  width: 21rpx;
+  height: 1rpx;
+  background-color: #979797;
+  margin-top:48rpx;
+}
+.tiem1,.time2{
+  display: inline-block;
+  width: 300rpx;
+  border: 1rpx solid #979797;
+  border-radius: 15rpx;
+  margin-top: 15rpx;
+  
+} */
+
+/* 温度设定 */
+.setup{
+  padding-left: 32rpx;
+}
+/* 当前状态 */
+.wd{
+  width: 100%;
+}
+.gj{
+  margin-right: 67rpx;
+}
+
+/* 设备数据 */
+.more-centen{
+  margin:10rpx 0;
+  background: #fff;
+  text-align: left;
+}
+.list-item{
+  width: 90%;
+  margin: 0 auto;
+  padding: 20rpx 0;
+  display: flex;
+  flex-wrap:wrap;
+}
+.item{
+  display: inline-block;
+  line-height: 50rpx;
+   
+}
+.item:last-child{
+  width: 100%;
+}
+.item1{
+  width: 57%;
+}
+.item:nth-child(2n){
+  padding-left: 20rpx;
+  width: 40%;
+}
+
+
+/* 设定温度 */
+/* .setTemperature{
+  height: 92rpx;
+  line-height: 92rpx;
+}
+.setTemp-text{
+  vertical-align: middle;
+  margin-left: 30rpx;
+}
+.setTemp-value{
+  border:1px solid #efefef;
+  vertical-align: middle;
+  border-radius: 30rpx;
+}
+.setTemp-icon{
+  vertical-align: middle;
+  margin-right: 30rpx;
+} */
+
+.canvas{
+  position: absolut;
+  top:52rpx;
+  left:-34rpx;
+  width: 800rpx;
+
+}
+
+.box1 {
+	width:750rpx;
+	height:600rpx;
+	position: absolute;
+	top: 100rpx;
+	bottom: 0;
+	left: -20rpx;
+	right: 20rpx;
+
+} 
+
+ec-canvas{
+  z-index: 111111111111111111;
+}

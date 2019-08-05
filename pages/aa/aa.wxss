@@ -1,0 +1,76 @@
+page{background: white}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* width: 90%; */
+  margin: 60rpx;
+}
+.logo image{margin: 0rpx auto}
+.row{
+  position: relative;
+  height: 90rpx;
+  width: 100%;
+  /* border-radius: 10rpx; */
+  background: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #cdcdcd;
+  padding:0rpx 0 0rpx 20rpx;
+}
+.row input{
+  width: 100%;
+  height:100%;
+
+  /* position: relative; */
+}
+/* .row .inp{
+  width: 200rpx;
+} */
+.codeBtn{
+  /* position: fixed;
+  display: inline-block;
+  right: 1rpx;
+  top: 0;
+  color: #bbb;
+  width: 30%;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx; */
+  /* position:fixed;
+  display:inline-block;
+  right:59rpx;
+  top:458rpx; */
+  color:#bbb;
+  /* width:34%; */
+  /* font-size:26rpx; */
+  height:60rpx;
+  line-height:60rpx;
+  font-size: 25rpx;
+  vertical-align: middle;
+  margin-top: 9rpx;
+  margin-right: 10rpx;
+  margin:14rpx 0rpx 14rpx 0;
+}
+.codeStyle{
+  color:rgb(51, 51, 51);
+  border:1px solid #333;
+}
+
+.subBtn{
+  width: 200rpx;
+  height: 80rpx;
+  background: #fff;
+  color: #000;
+  border-radius: 50rpx;
+  line-height: 80rpx;
+}
+
+.register{ width:84rpx;
+}
+.load{width:168rpx;
+}
+
+/* 注册 */
+.registerMask{background: rgba(0, 0, 0, .2);position: fixed;left: 0;right: 0;top: 0;z-index: 99;width: 100%;height: 100%}
+.box{margin: 160rpx 30rpx;padding: 50rpx 20rpx}
+.icon-shanchu{right: 0rpx;top: -10rpx}

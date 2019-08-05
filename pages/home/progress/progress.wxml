@@ -1,0 +1,124 @@
+<view class='container'>
+  <swiper class=''  style="height: 100%;">
+    <swiper-item  style="height: 100%">
+      <scroll-view scroll-y="true"  style="height: 100%;" bindscrolltolower="lower">
+
+          <!-- 设备信息 -->
+           <view class='list ' wx:for="{{deviceArr}}" wx:key="{{index}}">
+             <view class='lits-itme white' bindtap='' data-index='{{index}}'>
+                <view class='itme-top f3'>
+                  <text>{{index+1}}.报修单号：{{item.bxNumber}}</text>
+                  <text class='handle fr'>已处理</text>
+                </view>
+                <view class='header-content '>
+                  <view>报修时间：{{item.createTime}}</view>
+                  <view>设备编号：{{item.uuid}}</view>
+                  <view>产品名称：{{item.name}}</view>
+                  <view>产品型号：{{item.markerName}}</view>
+                  <view>故障描述：{{item.problem}}</view>
+                  <!-- 三角形 -->
+                  <view class='triangle {{item.rotate}} iconfont icon-shangsanjiaoxing' data-index='{{index}}' bindtap='clickTriangle'></view>
+                </view>
+            </view>
+              <!--维修进度  -->
+              <view class='work-process white' wx:if="{{isShow===index}}">
+                <!-- 时间进度 -->
+                 <view class='times'> 
+                    <view class='time' wx:for="{{times}}">
+                       <view class='monthlyDay f3'>{{item.time1}}</view>
+                       <view class='minute f2'>{{item.time2}}</view>
+                    </view>
+                  
+                 </view>
+                 <!-- 时间进度结束 -->
+                 <!-- 工单进度 wx:for="{{processData}}"-->
+                 <view class='process_wrap' > 
+                    <view class='process' wx:for="{{processData}}">
+                       <view class='process_line' style="background:{{item.start}}"></view>
+                       <view class='{{item.judge===1?"process_node":""}} {{item.judge===0?"process_node1":""}}' style="background:{{item.background}}; border:1px solid {{item.border}}" bindtap='setPeocessIcon'>
+                          <view class=' {{item.judge===1?"process_icon":""}}  {{item.judge===1?"iconfont":""}} {{item.judge===1?item.icon:""}}   {{item.judge===0?"process_circle":""}}' style="color:{{item.color}};background:{{item.background1}}" ></view>
+                       </view>
+                       <view class='process_line' style="background:{{item.end}}"></view>
+                    </view>
+                    <!-- <view class='process'>
+                       <view class='process_line'></view>
+                       <view class='{{item.judge===1?"process_node":process_node1}}'>
+                          <view class='{{item.judge===1?"":process_circle}}'></view>
+                       </view>
+                       <view class='process_line'></view>
+                    </view>
+                    <view class='process'>
+                       <view class='process_line'></view>
+                       <view class='process_node'>
+                          <view class='process_icon '></view>
+                       </view>
+                       <view class='process_line'></view>
+                    </view>
+                    <view class='process'>
+                       <view class='process_line'></view>
+                       <view class='process_node1'>
+                          <view class='process_circle'></view>
+                       </view>
+                       <view class='process_line'></view>
+                    </view>
+                    <view class='process'>
+                       <view class='process_line'></view>
+                       <view class='process_node'>
+                          <view class='process_icon'></view>
+                       </view>
+                       <view class='process_line'></view>
+                    </view>
+                     <view class='process'>
+                       <view class='process_line'></view>
+                       <view class='process_node1'>
+                          <view class='process_circle'></view>
+                       </view>
+                       <view class='process_line'></view>
+                    </view>
+                     <view class='process'>
+                       <view class='process_line'></view>
+                       <view class='process_node'>
+                          <view class='process_icon'></view>
+                       </view>
+                       <view class='process_line'></view>
+                    </view> -->
+                 </view>
+                 <!-- 工单进度结束 -->
+                 <!-- 右边文字 -->
+                 <view class='process-right'>
+                    <view class='right-item'>
+                        <view class='f3'>已维修</view>
+                        <view class='item-text'>维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论</view>
+                    </view>
+                    <view class='right-item'>
+                        <view class='item-text1 f2'>售后工程师处理中...</view>
+                    </view>
+                    <view class='right-item'>
+                        <view class='f3'>已派工</view>
+                        <view class='item-text'>售后工程师【姓名，工号，联系方式】，等待预约上门维修中...</view>
+                    </view>
+                    <view class='right-item'>
+                        <view class='item-text1 f2'>服务商派单处理中...</view>
+                    </view>
+                    <view class='right-item'>
+                        <view class='f3'>已派单</view>
+                        <view class='item-text'>服务商[北京创新能源科技有限公司派沃售后部],等待派单处理中...</view>
+                    </view>
+                    <view class='right-item'>
+                        <view class='item-text1 f2'>派单处理中...</view>
+                    </view>
+                    <view class='right-item'>
+                        <view class='f3'>待处理</view>
+                        <view class='item-text'>已生成工单，等待派单处理</view>
+                    </view>
+                 </view>
+              </view>
+               <!-- 右边文字结束 -->
+              <!--维修进度结束  -->
+           </view>
+           <!--设备信息结束  -->
+
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

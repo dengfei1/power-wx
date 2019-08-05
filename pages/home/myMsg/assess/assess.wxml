@@ -1,0 +1,92 @@
+<!--pages/home/myMsg/assess/assess.wxml-->
+<view class='container f3 h6'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <!-- 维修员姓名 -->
+    <view class='servicer bo white' wx:for="{{dataArr}}">
+      <view class='msg'>
+        <view class='img fl'></view>
+        <view class='nameBox fl'>
+          <view class='name'>{{item.name}}</view>
+          <view class='time f1'>{{item.time}}</view>
+        </view>
+        <view class='cleaned'></view>
+      </view>
+      <!-- <view class='te-al'>
+        <text class='dis iconfont icon-bukaixin pleased color {{currentTab == 0 ? "stadus" : ""}}' bindtap='pleased'>不满意</text>
+        <text class='dis iconfont icon-xiaolian pleased color {{currentTab == 1 ? "stadus" : ""}}' bindtap='pleased'>满意</text>
+      </view>
+      <view class='select dis' wx:for="{{selectArr}}">
+        <text class='dis label bor te-al'>{{item}}</text>
+      </view> -->
+      <!-- 满意度 -->
+      <view class='bottomSwiper te-al'>
+        <view class='tab1  {{currentData1 == 0 ? "tabBorer1" : ""}} iconfont icon-xiaolian pleased color dis' data-current="0" bindtap='checkCurrent1'>满意</view>
+        <view class='tab1  {{currentData1 == 1 ? "tabBorer1" : ""}} iconfont icon-bukaixin pleased color dis' data-current="1" bindtap='checkCurrent1'>不满意</view>
+        <swiper current="{{currentData1}}" class='swiper1' style="height:180rpx;" duration="300" bindchange="bindchange1">
+          <!-- 不满意 -->
+          <swiper-item>
+            <!-- <view class='select dis' wx:for="{{selectArr}}">
+              <text class='dis label bor te-al' bindtap='select'>{{item}}</text>
+            </view> -->
+            <checkbox-group bindchange="checkboxChange" data-index="{{index}}" data-checks="{{item.checks}}">
+              <label wx:for="{{selectArr}}">
+                <checkbox data-index="{{index}}" id="2" value="{{item.value}}" name="{{item.name}}" checked="{{item.checked}}">{{item.value}}</checkbox>
+              </label>
+            </checkbox-group>
+          </swiper-item>
+          <!-- 满意 -->
+          <swiper-item>
+            <checkbox-group bindchange="checkboxChange1" data-index="{{index}}" data-checks="{{item.checks}}">
+              <label wx:for="{{selectedArr}}">
+                <checkbox data-index="{{index}}" id="2" value="{{item.value}}" name="{{item.name}}" checked="{{item.checked}}">{{item.value}}</checkbox>
+              </label>
+            </checkbox-group>
+          </swiper-item>
+          <!-- 满意度结束 -->
+        </swiper>
+      </view>
+
+
+    </view>
+    <!-- 维修员姓名结束 -->
+    <!-- 故障项目名称 -->
+    <view class='fault servicer bo white'>
+      <view class='msg'>故障项目名称</view>
+      <!-- 小星星 -->
+      <view class='star te-al'>
+        <!-- <text class='iconfont icon-xingxing'></text>
+        <text class='iconfont icon-xingxing'></text>
+        <text class='iconfont icon-xingxing'></text>
+        <text class='iconfont icon-xingxing'></text>
+        <text class='iconfont icon-xingxing'></text> -->
+        <view class='stars'>
+          <view class='contents'>
+            <view wx:for="{{stars}}" wx:key="" style='background:url("{{item.flag==1?item.bgImg:item.bgfImg}}") no-repeat top; background-size:100%;' data-index="{{index}}" bindtap='scores' name='star'></view>
+          </view>
+        </view>
+      </view>
+      <textarea placeholder='请您对本次维修人员及维修效果进行评价' class='remark dis f1' name='remark'></textarea>
+
+      <view class="gallery">
+        <!-- 添加图片 -->
+        <view class="item dis" wx:for="{{images}}" wx:key="">
+          <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="aspectFill" />
+
+          <!-- 删除按钮 -->
+          <view class="delete" bindtap="delete" data-index="{{index}}">
+            <text class='iconfont icon-shanchu'></text>
+          </view>
+        </view>
+        <view class="item" bindtap="chooseImg">
+          <view class='addIcon'>+</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 故障项目名称结束 -->
+
+    <!-- 提交 -->
+    <button form-type="submit" class='submit'>提 交</button>
+  </form>
+
+</view>

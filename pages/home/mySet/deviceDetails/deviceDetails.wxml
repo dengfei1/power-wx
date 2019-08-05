@@ -1,0 +1,47 @@
+<view class='container'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='header'>
+        <view class='cancel f3' bindtap='toMySet'>取消</view>
+        <view class='preserve f3'>
+            <button class='but' form-type="submit">保存</button>
+        </view>
+    </view>
+    <view class='conten'>
+        <view class='warper'>
+            <view class='img fl bo'>
+                 <image class='bo' src="{{obj.img}}"></image>
+            </view>
+            <view class='left-warper f2'>
+                <form>
+                 <view class='itme'>
+                    <view class='name'>客户姓名<text class='rd'>*</text></view>
+                    <input placeholder='请输入联系人姓名' name='name' type='text'  value='{{obj.clientName!=""?obj.clientName:""}}'></input>
+                  </view>
+                  <view class='itme'>
+                    <view class='tel'>联系电话<text class='rd'>*</text></view>
+                    <input placeholder='请输入联系人电话号码' name='tel' type='number'  value='{{obj.clientPhone!=""?obj.clientPhone:""}}'></input>
+                  </view>
+                  <view class='itme'>
+                    <view class='address'>联系地址<text class='rd'>*</text></view>
+                    <input name="address" placeholder="请输入联系人地址"  type='text'  value='{{obj.clientAddress!=""?obj.clientAddress:""}}'></input>
+                  </view>
+                  <text class='fotn rd'>*请填写客户的真实信息，更好地为您提供售后服务</text>
+                </form>
+            </view>
+            <view class='bottom-warper f2'>
+               <view>设备编号： {{obj.uuid}}</view>
+               <view>设备类别： {{obj.modelName}}</view>
+               <view>产品类别： {{obj.patternName}}</view>
+               <view>产品系列： {{obj.seriesName}}</view>
+               <view>产品名称： {{obj.name}}</view>
+               <view>产品型号： {{obj.markerName}}</view>
+               <view>机型模式： {{obj.modelName}}</view>
+               <view>机身编号： {{obj.number}}</view>
+               <view>产出日期： {{obj.manufactureDate}}</view>
+               <view>保修日期： {{obj.warrantyTime}}</view>
+               <view>经销售：   {{obj.dname}}</view>
+            </view>
+        </view>
+    </view>
+  </form>
+</view>

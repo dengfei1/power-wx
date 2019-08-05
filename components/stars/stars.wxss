@@ -1,0 +1,28 @@
+.star{
+  display: inline-block;
+}
+.stars {
+  width:400rpx;
+  display: flex;
+  height: 80rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.contents {
+  width:400rpx;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.contents:last-of-type {
+  height: 70rpx;
+
+}
+
+.contents:last-of-type view {
+  height: 72rpx;
+  margin-right: 15rpx;
+  background-size: 100% 100%;
+}

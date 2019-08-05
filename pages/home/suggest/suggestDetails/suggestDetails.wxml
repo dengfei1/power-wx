@@ -1,0 +1,13 @@
+<view class='container'>
+  <view class='text'>
+      <view class='title title1 f3'>{{objList.type}}</view>
+  </view>
+  <view class='text'>
+      <view class='title title2 f3'>意见内容</view>
+      <text class='f2 content'>{{objList.content}}</text>
+  </view>
+  <view class='text'>
+    <view class='title title2 f3'>回复内容</view>
+    <text class='f2 content'>{{objList.dealRemark}}</text>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+<!--pages/home/mySet/mySet.wxml-->
+<view>
+  <view class='container f3' id='mySet'>
+    <view class='top white color h9'>
+      <view class='top-left ma20 fl '>已绑定设备 {{list.length}}</view>
+      <view class='top-right fr iconfont  icon-saomiao' bindtap='click'></view>
+      <view class='cleaned'></view>
+    </view>
+      <scroll-view scroll-y style="height: 600px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class="cont">
+      <!-- 列表 -->
+      <view wx:for="{{list}}" wx:key="index" class="list-item f3 h7 color">
+        <!-- 滑动删除 -->
+        <!-- 列表图片 -->
+        
+        <view class='del iconfont icon-jiechubangding fr f4' bindtap='delItem' data-index="{{index}}"></view>
+        <view class='chakan iconfont icon-chakan fr f4' bindtap='deviceDetails' data-index="{{index}}"></view>
+        <view class='item'>
+            <!-- 图片 -->
+            <view class='img fl bo'>
+                <image class='bo' src="{{item.img}}"></image>
+            </view>
+
+            <view class='left fl'>
+                  <view>设备编号：{{item.uuid}}</view>
+                  <view>机身编号：{{item.number}}</view>
+                  <view>产品类别：{{item.typeName}}</view>
+                  <!-- <view>产品系列：{{item.seriesName}}</view> -->
+                  <view>产品名称：{{item.name}}</view>
+                  <view>产品型号：{{item.markerName}}</view>
+                  <view>机型模式：{{item.patternName}}</view>
+            </view>
+         
+            <!-- <view class='right'>
+          
+              <view class='cleaned'></view>
+              <view>机身编号：{{item.number}}</view>
+              <view>出厂日期：{{item.manufactureDate}}</view>
+              <view>激活时间：{{item.actedate}}</view>
+              <view>保修到期：{{item.updata}}</view>
+              <view>经销商：{{item.dname}}</view>
+            </view> -->
+          
+        </view>
+      </view>
+      
+    </view>
+    </scroll-view>
+  
+  </view>
+
+</view>

@@ -1,0 +1,124 @@
+
+<view class="container" id='home'>
+  <!-- 轮播 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval1}}" duration="{{duration}}" style='overflow: hidden'  bindchange='swiperCurrent' >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item  bindtap="swiperClick" data-index="{{index}}">
+        <image src="{{item.img}}" class="slide-image" width="100%" style='height:100%' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 轮播结束 -->
+  <!-- 公告 -->
+  <view class='member-msg dis'>
+    <view class='left fl'>
+      <icon class='iconfont icon-gonggao'></icon>
+      <text class='msg-title'>会员消息</text>
+      <text class='msg-new' style='font-style:italic'>NEW</text>
+      <text class='msg-content dis'>
+  </text>
+    </view>
+    <view class='loop-text right fl'>
+     
+      <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="5000">
+        <block wx:for="{{msgList}}">
+
+          <swiper-item>
+            <view class="swiper_item">{{item.title}}</view>
+          </swiper-item>
+
+        </block>
+      </swiper>
+    </view>
+    <view class='cleaned'></view>
+
+  </view>
+  <!-- 公告结束 -->
+  <!-- 会员信息 -->
+  <view class='member-detail backg'>
+    <view class='member-mar'>
+      <view class='detail-msg'>
+       
+        <view>
+          <view class='msg-img fl'>
+            <!-- <open-data type="userAvatarUrl"></open-data> -->
+            <image class="avatar" src='{{avatarUrl}}' style='width:100%;height:100%'></image>
+          </view>
+          <view class='load'>
+            <view class='msg-user fl'>
+              <view class='msg-top'>
+                <view class='user-name fl'>
+                  <view class='dis f1'>
+                
+                    {{nickName}}
+                  </view>
+                  <view class='line'></view>
+                  <view class='mem-logo' style='width:120rpx'>
+                    <view class='masonry iconfont icon-huiyuan dis'></view>
+                    <view class='member'>普通会员</view>
+                  </view>
+                  <view class='user-num f2'>
+                    <open-data type="getPhoneNumber"></open-data>
+                  </view>
+                </view>
+                <view class='msg-date fr f2'>{{date}}</view>
+                <view class='cleaned'></view>
+              </view>
+              <view class='msg-centre'>{{tel}}</view>
+              <view class='msg-bot'>
+                <icon class='iconfont icon-dingwei'></icon>
+                <text class='msg-address f1'>{{address}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='cleaned'></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 会员结束 -->
+  <!-- 功能 -->
+  <view class='feature'>
+
+    <view class='dis' bindtap='toMy'>
+      <text class='fe-my backcol iconfont icon-ziyuanxhdpi dis'></text>
+      <view class='te-al f2'>{{dataList[0].name}}</view>
+    </view>
+   
+
+    <view class='dis' bindtap='toSet'>
+      <text class='fe-set backcol iconfont icon-baoxiu dis'></text>
+      <view class='te-al f2'>{{dataList[1].name}}</view>
+    </view>
+    <view class='dis rela' bindtap='toBad'>
+      <text class='fe-bad backcol iconfont icon-gaojing dis'></text>
+      <view class='point abso' wx:if="{{isHide}}">{{count}}</view>
+      <view class='te-al f2'>{{dataList[2].name}}</view>
+
+    </view>
+    <view class='dis' bindtap='toMsg'>
+      <text class='fe-msg backcol iconfont iconfont1 icon-xiaoxi dis'></text>
+      <view class='te-al f2'>{{dataList[3].name}}</view>
+    </view>
+    <view class='dis' bindtap='toSchedule'>
+      <text class='sc-msg backcol iconfont icon-jinduchaxun dis'></text>
+      <view class='te-al f2'>{{dataList[4].name}}</view>
+    </view>
+    <view class='dis' bindtap='toSuggest'>
+      <text class='sug-msg backcol iconfont icon-yijianfankui dis'></text>
+      <view class='te-al f2'>{{dataList[5].name}}</view>
+    </view>
+    <view class='dis' bindtap='toService'>
+      <text class='ser-msg backcol iconfont icon-wangdian dis'></text>
+      <view class='te-al f2'>{{dataList[6].name}}</view>
+    </view>
+    <view class='dis' bindtap='toAssess'>
+      <text class='ass-msg backcol iconfont iconfont1 icon-pingjia dis'></text>
+      <view class='te-al f2'>{{dataList[7].name}}</view>
+    </view>
+  </view>
+  <!-- 功能结束 -->
+  <!-- 统计 -->
+ 
+  <!-- 统计结束 -->
+</view>

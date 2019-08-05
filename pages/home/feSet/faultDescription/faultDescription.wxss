@@ -1,0 +1,38 @@
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.cancel{
+  width: 150rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  justify-content: center;
+  color:#333;
+  font-size: 35rpx;
+}
+/* 按钮 */
+.but{
+  background: #fff;
+  outline: none;
+  line-height: 70rpx;
+  text-align: center;
+  justify-content: center;
+  font-size: 35rpx;
+  color: #333;
+}
+ button::after{
+    border:none;
+}
+.textarea {
+  width: 95%;
+  border:1px solid #cdcdcd;
+  border-radius:10rpx;
+  min-height:150rpx;
+  padding:10rpx 10rpx 10rpx 20rpx;
+  text-align:justify;
+  margin-top:10rpx;
+  margin: 0 auto;
+}

@@ -1,0 +1,88 @@
+{
+  "pages": [
+    "pages/mask/mask",
+    "pages/user/complaint/complaint",
+    
+    
+   "pages/energy/energy",
+    "pages/run/run",
+    "pages/home/home",
+    "pages/home/mySet/mySet",
+    "pages/home/assess/assess",
+    "pages/aa/aa",
+    "pages/home/myBad/myBad",
+    "pages/home/myMsg/myMsg",
+    "pages/user/detailMsg/detailMsg",
+    "pages/user/our/our",
+    "pages/home/myMsg/assess/assess",
+    "pages/home/feSet/feSet",
+    "pages/user/user",
+    "pages/home/suggest/suggest",
+    "pages/user/customerMsg/customerMsg",
+    "pages/logs/logs",
+    "pages/index/index",
+    "pages/text/text",
+    "pages/user/complaint/details/details",
+    "pages/user/complaint/compType/compType",
+    "pages/user/complaint/compDetails/compDetails",
+    "pages/run/moreEquipment/moreEquipment",
+    "pages/home/mySet/deviceDetails/deviceDetails",
+    "pages/user/service/service",
+    "pages/user/servicePromise/servicePromise",
+    "pages/home/MyAssess/MyAssess",
+    "pages/home/progress/progress",
+    "pages/home/feSet/uuId/uuId",
+    "pages/home/feSet/modelName/modelName",
+    "pages/home/feSet/faultDescription/faultDescription",
+    "pages/home/feSet/userName/userName",
+    "pages/home/feSet/tel/tel",
+    "pages/home/feSet/address/address",
+    "pages/home/touch/touch",
+    "pages/home/touch/provinces/provinces",
+    "pages/home/touch/citys/citys",
+    "pages/home/touch/countys/countys",
+    "pages/home/suggest/addSuggest/addSuggest",
+    "pages/home/suggest/suggestDetails/suggestDetails",
+    "pages/home/assesDetails/assesDetails",
+    "pages/home/information/information",
+    "pages/home/myBad/badDetails/badDetails"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/sy.png",
+        "selectedIconPath": "images/sy1.png"
+      },
+      {
+        "pagePath": "pages/run/run",
+        "text": "运行",
+        "iconPath": "images/sz.png",
+        "selectedIconPath": "images/sz1.png"
+      },
+   
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/wo.png",
+        "selectedIconPath": "images/wo1.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

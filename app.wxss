@@ -1,0 +1,80 @@
+/**app.wxss**/
+@import "pages/icon/icon.wxss";
+@import "pages/icon/icon1.wxss";
+
+page{color: #5d5d5d; background: #efefef;}
+/* 浮动 */
+.fl{float: left;}
+.fr{float: right;}
+.dis{display: inline-block;}
+.qf{overflow: hidden;}
+/* 背景色 */
+.backg{background:#eae9e9; }
+.white{background: white;}
+/* 清除浮动 */
+.cleaned{clear: both;}
+/* 字号 */
+.f1{font-size: 28rpx}
+.f2{font-size: 24rpx}
+.f3{font-size: 30rpx}
+.f4{font-size: 32rpx}
+.te-al{text-align: center}
+/* 行间距 */
+.h10{line-height: 100rpx}
+.h9{line-height: 90rpx}
+.h8{line-height: 80rpx}
+.h7{line-height: 70rpx}
+.h6{line-height: 60rpx}
+/* 字体颜色 */
+.color{color: #979797}
+/* 定位 */
+.rela{position: relative}
+.abso{position: absolute}
+.fixed{position: fixed}
+/* 距离 */
+.le10{left: 10rpx}
+.le15{left: 15rpx}
+.le20{left: 20rpx}
+.le30{left: 30rpx}
+.ri10{right: 10rpx}
+.ri15{right: 15rpx}
+.ri20{right: 46rpx}
+.ri30{right: 30rpx}
+.to0{top: 0}
+/* 边框 */
+.bo{border: solid 1px #efefef;border-radius: 15rpx}
+.bor{border: solid 1px #979797;border-radius: 15rpx}
+/* margin-left */
+.ma10{margin-left:10rpx; }
+.ma15{margin-left:15rpx; }
+.ma20{margin-left:20rpx; }
+.ma25{margin-left:25rpx; }
+.ma30{margin-left:30rpx; }
+.pa10{padding-left:10rpx; }
+.pa15{padding-left:15rpx; }
+.pa20{padding-left:20rpx; }
+.pa25{padding-left:25rpx; }
+.pa30{padding-left:30rpx; }
+/* 提交 */
+.submit{background: #0194dd;margin: 30rpx;font-weight: bold;color: white}
+/* 隐藏滚动条 */
+::-webkit-scrollbar {display: none;}
+
+.echarts{
+  position: absolute;
+  top:94rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

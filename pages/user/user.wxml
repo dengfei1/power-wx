@@ -1,0 +1,53 @@
+<!--pages/user/user.wxml-->
+
+
+<view class='container' id='user'>
+  <view class='top'>
+    <!-- 会员信息 -->
+    <view class='member-detail backg' bindtap='toDetailMsg'>
+      <view class='member-mar'>
+        <view class='detail-msg'>
+          
+          <view>
+            <view class='msg-img fl'>
+              <image class="avatar" src='{{avatarUrl}}' style='width:100%;height:100%'></image>
+            </view>
+            <view class='load'>
+              <view class='msg-user fl'>
+                <view class='msg-top'>
+                  <view class='user-name fl'>
+                    <view class='dis f1'>
+                      {{nickName}}
+                    </view>
+                    <view class='line'></view>
+                    <view class='mem-logo' style='width:120rpx'>
+                       <view class='masonry iconfont icon-huiyuan dis'></view>
+                        <view class='member'>普通会员</view>
+                    </view>
+                    <view class='user-num f2'></view>
+                  </view>
+                  <view class='msg-date fr f2'>{{date}}</view>
+                  <view class='cleaned'></view>
+                </view>
+                <view class='msg-centre'>{{tel}}</view>
+                <view class='msg-bot'>
+                  <icon class='iconfont icon-dingwei'></icon>
+                  <text class='msg-address f1'>{{address}}</text>
+                </view>
+              </view>
+            </view>
+            <view class='cleaned'></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 会员结束 -->
+
+  </view>
+  <view class='list h10 f3 white'>
+    <view bindtap='{{item.toMsg}}' wx:for="{{dataArr}}" wx:for-index="activityIndex">
+      <text class='item dis {{item.dataIcon}}'> {{item.name}}</text>
+    </view>
+  </view>
+  <button class='submit' bindtap='backLoad'>退出登录</button>
+</view>

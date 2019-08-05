@@ -1,0 +1,11 @@
+<import src="../../../wxParse/wxParse.wxml"/> 
+<view class='container'>
+    <view class='header'>
+      <text class='title f4'>{{objInf.title}}</text>
+      <text class='time f2'>({{createtime}})</text>
+    </view>
+    <view class='content f3'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+
+</view>

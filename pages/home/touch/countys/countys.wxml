@@ -1,0 +1,13 @@
+<view class='container'>
+   <view class='header white '>
+     <text class='icon iconfont icon-fanhui fl f3' bindtap='return'>返回</text>
+     <text class='content f3'>请选择市</text>
+   </view>
+   <view class='list'>
+      <view class='list-item white' wx:for="{{countys}}" bindtap='toCountys' data-index="{{index}}">
+         <text class='provinces f3'>{{item}}</text>
+         <text class='icon1 iconfont icon-gengduo fr'></text>
+      </view>
+
+   </view>
+</view>
