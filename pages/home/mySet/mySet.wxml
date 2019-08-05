@@ -43,7 +43,9 @@
           
         </view>
       </view>
-      
+         <!-- 信息提示 -->
+        <view class='tips f2'>{{tips}}</view>
+        <!-- 信息提示结束 -->
     </view>
     </scroll-view>
   

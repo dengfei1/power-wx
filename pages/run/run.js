@@ -105,9 +105,13 @@ Page({
 
 
     //指令下发状态
-    messageid:''
-
+    messageid:'',
     
+    //设置模式的默认值
+    modelValue:0,
+    
+    //设置模式：制冷 制热   默认制热
+    model: ['制热模式','制冷模式']
   },
 
   test(csTemp, tempTime,color1,text){
@@ -372,21 +376,61 @@ Page({
   // },
   // 参数设置接口
   //  {{ dataArr[0].runnmodel == 0 ? '单热水' : (dataArr[0].runnmodel == 1 ? '单制热' : (dataArr[0].runnmodel == 2 ? '单制冷' : '未知')) }}
-  setting: function() {
+  /**
+   * 设置模式  //jqtype   0:单热水，1单制热, 2单制冷, 3热水+[u1]制热, 4热水+制冷, 默认1  3应为制冷+制热
+   */
+  bindModel:function(e){
+    var that = this;
+    console.log('picker发送选择改变，携带值为', this.data.model[e.detail.value], e.detail.value)
+    that.setData({
+      modelValue: e.detail.value
+    })
+    var type ="runnmodel";
+    var idnex=e.detail.value;
 
+    //0001 单制热  0002单制冷  0003热水+制热  0004热水+制冷
+    var model = ["0001", "0002", " 0003","0004热水"];
+    var params = {
+      url: '/send/sendMainboard?unitIp=' + '01' + '&&type=' + type + '&&param=' + model[idnex] + "&&uuid=" + that.data.dataList.uuid,
+      method: "POST",
+      callBack: (res) => {
+
+        console.log('设置模式', res)
+        console.log(res.data.messageid)
+        that.setData({
+          messageid: res.data.messageid
+        })
+       
+      }
+    }
+    http.request(params)
+
+    var myVar = setInterval(function () {
+      console.log(that.data.messageid)
+      var params = {
+        url: '/commandPaiWo/findCommand?messageid=' + that.data.messageid + '&&uuid=' + that.data.dataList.uuid,
+        method: "GET",
+        callBack: (res) => {
+          console.log('指令状态', res)
+          wx.showToast({
+            icon: 'none',
+            title: res.data[0].commstatus,
+          })
+          if (res.data[0].commstatus == "已送达") {
+            clearInterval(myVar);
+            that.setData({
+              messageid: ' '
+            })
+          }
+
+
+        }
+
+      }
+      http.request(params)
+    }, 1000)
   },
-  /**
-   * 水箱温度
-   */
-  
-  // totalTem: function() {
-  // },
-  /**
-   *  进水温度
-   */
-  // leaveTem: function() {
-   
-  // },
+
 /**
  *  出水温度
  */
@@ -576,7 +620,7 @@ Page({
           var openMinute = addTime[index].open2
           console.log("删除", openHour, openMinute)
           var params = {
-            url: '/timer/del?uuid=' + that.data.dataList.uuid + "&&openHour=" + openHour+"&&",
+            url: '/timer/del?uuid=' + that.data.dataList.uuid + "&&openHour=" + openHour + "&&openMinute=" + openMinute,
             method: "GET",
             callBack: (res) => {
               console.log('删除定时', res)
@@ -876,39 +920,28 @@ Page({
     var userList = wx.getStorageSync('userList')
 
     var id = userList.user.data.currentUser.id
-    console.log(id, "id");
-    console.log('userList', userList.user.data.sessionId)
-    app.globalData.header.Cookie = 'JSESSIONID=' + userList.user.data.sessionId;
-    wx.request({
-      url: app.globalData.url + '/appLet/findLetEquipment?userId=' + id,
-      header: app.globalData.header,
+
+    var params = {
+      url: '/appLet/findLetEquipment?userId=' + id,
       method: "POST",
-      success: function (res) {
+      callBack: (res) => {
         console.log(res, '设备查询')
         that.setData({
-          deviceArr:res.data.data,
-          dataList: res.data.data[0],
-          parameter:true
+          deviceArr: res.data,
+          dataList: res.data[0],
+          parameter: true
         })
-
-        that.run1(res.data.data[0].uuid)
-        console.log("默认第一个设备uuid", res.data.data[0].uuid, that.data.dataList)
+        console.log("--------------")
+        that.run1(res.data[0].uuid)
+        console.log("默认第一个设备uuid", res.data[0].uuid, that.dataList)
         // that.chartList()
         that.viewTiming()
 
 
-      },
-      fail: function (res) {
-        console.log(res, 'res1')
-        wx.showToast({
-          title: '请求失败',
-          icon: 'none',
-          duration: 1500
-        })
       }
-    });
 
-    
+    }
+    http.request(params)
   },
   /**
    * 判断是否绑定设备

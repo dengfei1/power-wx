@@ -22,7 +22,7 @@
                     <text class='icon iconfont icon-dianhua'></text>
                     <text bindtap='callMerchant' data-index="{{index}}">联系商家</text>
                   </view>
-                  <view class='navigation dis f2' bindtap='navigation'>
+                  <view class='navigation dis f2' bindtap='navigation' data-index="{{index}}">
                     <text class='icon icon1 iconfont icon-daohang'></text>
                     <text>导航</text>
                   </view>

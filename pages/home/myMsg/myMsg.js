@@ -37,7 +37,8 @@ Page({
     scrollTop: 100,
     
     //存时间
-    results:[]
+    results:[],
+    tips:''
     
   },
 
@@ -92,7 +93,15 @@ Page({
           
         }
      
-
+        if (res.data.length === 0) {
+          that.setData({
+            tips: "暂时无消息"
+          })
+        } else {
+          that.setData({
+            tips: ''
+          })
+        }
 
       }
 

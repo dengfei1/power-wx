@@ -168,7 +168,6 @@
   text-align: center;
   margin-top: 20rpx;
   background: #fff;
-  height: 62rpx;
   line-height: 43rpx;
   font-size: 32rpx;
 }

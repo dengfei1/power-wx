@@ -18,7 +18,8 @@ Page({
     content:'',
     objData :{},
     id: 0,
-    state: 0
+    state: 0,
+    tips:''
   },
 
   /**
@@ -109,6 +110,16 @@ Page({
           htmlAry: htmlAry//记得这里要加入
         })
         this.isHandle()
+
+        if (res.data.length === 0) {
+          that.setData({
+            tips: "目前没有故障报警"
+          })
+        } else {
+          that.setData({
+            tips: ''
+          })
+        }
       }
 
     }

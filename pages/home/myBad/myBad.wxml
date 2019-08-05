@@ -51,7 +51,7 @@
       <view class='chakan iconfont icon-icon-chakanxq1-copy fr f4' bindtap='deviceDetails' data-index="{{index}}"></view>
     </view>
   </view>
-
+  
   <view class="mask" wx:if="{{isShow}}">
     <view class="wraper white">
       <view class='detail-mask'>
@@ -67,4 +67,7 @@
       <text class='iconfont icon-shanchu  cancel' bindtap='bindCancel'></text>
     </view>
   </view>
+   <!-- 信息提示 -->
+   <view class='tips f2'>{{tips}}</view>
+    <!-- 信息提示结束 -->
 </view>

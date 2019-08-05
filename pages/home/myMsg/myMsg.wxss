@@ -260,3 +260,12 @@
   padding: 20rpx;
 
 }
+
+
+/* 提示信息 */
+.tips{
+  width: 100%;
+  text-align: center;
+  color: #999;
+  margin-top: 40rpx;
+}

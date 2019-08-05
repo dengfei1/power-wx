@@ -25,7 +25,9 @@
               <view class='more' bindtap='more' data-index="{{index}}">查看详情</view>
             </view>
           </view>
-          
+          <!-- 信息提示 -->
+          <view class='tips f2'>{{tips}}</view>
+          <!-- 信息提示结束 -->
           </scroll-view>
         </swiper-item>
         <!-- 我的消息 -->

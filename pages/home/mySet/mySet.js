@@ -14,7 +14,8 @@ Page({
     show: "",
     id: '',
     testNum: '',
-    scrollTop: 100
+    scrollTop: 100,
+    tips: "",
   },
   /**
    * 生命周期函数--监听页面加载
@@ -267,6 +268,15 @@ Page({
         that.setData({
           list: res.data
         })
+        if (res.data.length === 0) {
+          that.setData({
+            tips: "请绑定设备"
+          })
+        } else {
+          that.setData({
+            tips: ''
+          })
+        }
         dialog.hide();
       }
 

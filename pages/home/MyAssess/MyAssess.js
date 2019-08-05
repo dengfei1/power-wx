@@ -1,6 +1,7 @@
 // pages/home/myMsg/myMsg.js
 var app = new getApp();
 var http = require("../../../utils/http.js");
+var dialog = require("../../../utils/dialog.js")
 Page({
 
   /**
@@ -20,8 +21,8 @@ Page({
     pages: 0,
     dataList: [{}],
     moreDetail: [{
-      title: '公告标题',
-      main: '  公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概公告内容大概',
+      title: '',
+      main: '  ',
       imgUrl: ''
     }],
     // 待评价
@@ -187,22 +188,24 @@ Page({
    * 获取待评价信息
    */
   getStayAssessInfo(){
-
+    
     var that = this;
     var userList = wx.getStorageSync('userList');
     var userid = userList.user.data.currentUser.id;
+    dialog.loading();
     var params = {
-      url: '/maintainOrder/findByUserId?userId=' + userid+"&&type="+3+"&&pageNum=1"+"&&pageSize=5",
+      url: '/maintainOrder/findByUserId?userId=' + userid+"&&type="+3+"&&pageNum=1"+"&&pageSize=30",
       method: "POST",
       callBack: (res) => {
         console.log("获取待评价信息", res.data)
         that.setData({
           toBe: res.data.data
         })
-
+        dialog.hide();
       }
     }
     http.request(params)
+
   },
   /**
    * 获取已评价信息
@@ -211,8 +214,9 @@ Page({
     var that = this;
     var userList = wx.getStorageSync('userList');
     var userid = userList.user.data.currentUser.id;
+    dialog.loading();
     var params = {
-      url: '/maintainOrder/findByUserId?userId=' + userid + "&&type=" + 4 + "&&pageNum=1" + "&&pageSize=5",
+      url: '/maintainOrder/findByUserId?userId=' + userid + "&&type=" + 4 + "&&pageNum=1" + "&&pageSize=30",
       method: "POST",
       callBack: (res) => {
         console.log("获取已评价信息", res.data)
@@ -229,12 +233,12 @@ Page({
           console.log(wxTime)
           hadAss[i].wxTime = wxTime
         }
-
+       
 
         that.setData({
           hadAss: hadAss
         })
-        
+        dialog.hide();
       }
     }
     http.request(params)
@@ -299,18 +303,18 @@ Page({
     var that = this;
     var index = e.currentTarget.dataset.index;
     var hadAss = that.data.hadAss;
-    var id = that.data.hadAss[i].id
-    hadAss.splice(index, 1);
-    console.log("index", index)
+    var id = hadAss[i].id
+    
     var params = {
       url: '/maintainOrder/delDisposeOrder?id=' +id,
       method: "POST",
       callBack: (res) => {
         console.log("删除评论成功", res.data)
-        // that.setData({
-        //   hadAss: res.data.data
-        // })
-
+        that.setData({
+          hadAss: res.data.data
+        })
+        hadAss.splice(index, 1);
+        console.log("index", index)
       }
     }
 

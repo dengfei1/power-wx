@@ -57,6 +57,18 @@
                 </picker>
                    <view class='cleaned'></view>
               </view>
+                  <view class="swiper-list" wx:if="{{dataArr[0].jqtype==4||dataArr[0].jqtype==5||dataArr[0].jqtype==6}}">
+                <picker class='list-left wd' bindchange="bindModel" value="{{modelValue}}" range="{{model}}">       <text class='fl'>设置模式</text>
+    
+                  <text class='iconfont icon-tubiao- fl' style='margin-left:20rpx'></text>
+                  <view class='fr list-right gj'>
+                  <!-- {{dataArr[0].control[4] == 0 ? '关机':(dataArr[0].control[4] == 1?'开机':'未知')}} -->
+                  {{model[modelValue]}}
+                </view>
+             
+                </picker>
+                   <view class='cleaned'></view>
+              </view>
                <!-- <view class="swiper-list">
                  <view class='setTemperature'>
                     <text class='setTemp-text fl'>设定温度</text>

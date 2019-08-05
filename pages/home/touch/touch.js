@@ -159,14 +159,17 @@ Page({
     let { listArr } = this.data;
     let index = e.currentTarget.dataset.index;
     let location = listArr[index].location
+    console.log("location", location)
     var arr = location.split(",")
+    console.log("arr", arr)
+    
     var name = listArr[index].name
     var address = listArr[index].address
-    var longitude = location[0]
-    var latitude = location[1]
+    var longitude = arr[0]*1
+    var latitude = arr[1]*1
 
 
-    console.log("经度:", location[0], "纬度:", location[1])
+    console.log("经度:", longitude, "纬度:", latitude)
 
     wx.getSetting({
       success: (res) => {

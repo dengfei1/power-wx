@@ -55,10 +55,28 @@ function request(params, refetch) {
     responseType: params.responseType == undefined ? 'text' : params.responseType,
     success: function (res) {
       if (res.statusCode == 200) {
+        console.log("200",res)
         //如果有定义了params.callBack，则调用 params.callBack(res.data)
+       
+        if (res.data.statuscode==803) {
+            wx.showModal({
+              content: res.data.info,
+              showCancel: false,
+              success: function (res) {
+                if (res.confirm) {
+                  console.log('点击了确认，跳转登录页面')
+                  wx.reLaunch({
+                    url: '/pages/aa/aa'
+                  })
+                }
+              }
+            })
+          
+        }
         if (params.callBack) {
           params.callBack(res.data);
         }
+      
 
       } else if (res.statusCode == 500) {
         wx.hideLoading();
@@ -110,10 +128,43 @@ function request(params, refetch) {
     },
     fail: function (err) {
       wx.hideLoading();
-      wx.showToast({
-        title: "服务器出了点小差",
-        icon: "none"
-      });
+      // wx.showToast({
+      //   title: "服务器出了点小差",
+      //   icon: "none"
+      // });statuscode:803
+      //再次调用wx.login()
+      console.log(res, '登录过期了')
+      wx.showModal({
+        title: '提示',
+        content: '你的登录信息过期了，请重新登录',
+        showCancel: false,
+        success:(res)=>{
+          wx.login({
+            success(res) {
+              that.setData({
+                code: res.code
+              })
+
+              console.log(res)
+              if (res.code) {
+                // 发起网络请求   
+                wx.request({
+                  url: app.globalData.url + '/login/WXlogin',
+                  data: {
+                    wxCode: res.code
+                  },
+                })
+              } else {
+                console.log('登录失败！' + res.errMsg)
+              }
+            }
+          })
+        }
+      })
+
+      
+      
+
     }
   })
 }
