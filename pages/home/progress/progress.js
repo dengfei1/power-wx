@@ -101,6 +101,28 @@ Page({
         time1: "",
         time2: ""
       },
+    ],
+    listData:[
+      {
+        text1:"已维修",
+        text2:'维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论',
+        text3: '',
+      },
+      {
+        text1: "售后工程师处理中",
+        text2: '已派工',
+        text3: '售后工程师【姓名，工号，联系方式】，等待预约上门维修中...',
+      },
+      {
+        text1: "服务商派单处理中...",
+        text2: '已派单',
+        text3: '服务商[北京创新能源科技有限公司派沃售后部],等待派单处理中...',
+      },
+      {
+        text1: "派单处理中...",
+        text2: '待处理',
+        text3: '已生成工单，等待派单处理',
+      }
     ]
 
   },
@@ -300,7 +322,7 @@ Page({
     //接单时间
     var jdTime = that.data.deviceArr[index].jdTime
     console.log("进度时间", wxTime, pdTime, jdTime, bxTime)
-    var timeArr = [wxTime, pdTime, jdTime, bxTime]
+    var timeArr = [wxTime, jdTime ,pdTime, bxTime]
     console.log("timeArr:",timeArr)
     var time1=""
     var time2 = ""
@@ -332,16 +354,16 @@ Page({
       var userList = wx.getStorageSync('userList');
       var userid = userList.user.data.currentUser.id
       var pageNum = 1;
-      var pageSize = 10;
+      var pageSize = 20;
       var params = {
         url: '/repair/findAll?pageNum=' + pageNum + "&userId=" + userid + "&&pageSize=" + pageSize,
         method: "POST",
-        callBack: (res) => {
-          dialog.hide()
+        callBack: (res) => {      
           console.log('进度信息', res)
           that.setData({
             deviceArr: res.data
           })
+          dialog.hide()
         }
 
       }

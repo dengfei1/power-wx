@@ -72,3 +72,15 @@ input{
  button::after{
     border:none;
 }
+/* 地址 */
+.ress{
+  border:1px solid #ccc;
+  border-radius: 10rpx;
+  display: inline-block;
+  width: 350rpx;
+  vertical-align: middle;
+  padding-left: 20rpx;
+  margin-left: 10rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}

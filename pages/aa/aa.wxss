@@ -6,7 +6,7 @@ page{background: white}
   /* width: 90%; */
   margin: 60rpx;
 }
-.logo image{margin: 0rpx auto}
+.logo image{margin:20rpx auto 130rpx auto;}
 .row{
   position: relative;
   height: 90rpx;

@@ -1,0 +1,103 @@
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.cancel{
+  width: 150rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  justify-content: center;
+  color:#333;
+  font-size: 35rpx;
+}
+/* 按钮 */
+.but{
+  background: #fff;
+  outline: none;
+  line-height: 70rpx;
+  text-align: center;
+  justify-content: center;
+  font-size: 35rpx;
+  color: #333;
+}
+ button::after{
+    border:none;
+}
+.wraper{
+  border-top:1px solid #cdcdcd;
+  /* height: 50rpx;
+  line-height: 50rpx;
+  padding:  15rpx 20rpx 15rpx 50rpx; */
+  text-align: center;
+}
+.icon-dizhi{
+  font-size: 38rpx;
+  color: #000;
+}
+.address{
+  margin-left: 20rpx;
+
+  text-align: center;
+}
+.textarea {
+  width: 100%;
+  border:1px solid #cdcdcd;
+  border-radius:10rpx;
+  min-height:150rpx;
+  padding:10rpx;
+  text-align:justify;
+  margin-top:10rpx;
+  margin: 0 auto;
+}
+
+.weui-cell_input {
+  padding-top:0;
+  padding-bottom:0;
+
+}
+.weui-cell {
+  padding:0px 15px;
+  position:relative;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:flex;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  align-items:center;
+}
+.weui-cell__bd {
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+}
+.weui-input {
+  height:2.58823529em;
+  min-height:2.58823529em;
+  line-height:2.58823529em;
+}
+
+/* 下拉宽样式 */
+.citybody {
+  position:fixed;
+  bottom:0px;
+}
+.cityheader {
+  position: absolute;
+  top:0px;
+  width: 100%;
+  z-index: 4;
+}
+.city-cancel {
+  float: left;
+  margin: 20rpx;
+  color: #818181;
+}
+
+.city-true {
+  float: right;
+  margin: 20rpx;
+  color: #2FB42E
+}

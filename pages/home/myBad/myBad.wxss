@@ -72,8 +72,11 @@
   width: 100%;
   text-align: center;
   color: #999;
-  margin-top: 40rpx;
+  margin-top: 70rpx;
 }
+
+
+
 
 /* 下拉刷新 */
 .remind{

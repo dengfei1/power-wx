@@ -14,7 +14,15 @@ Page({
     address:''
   },
   /**
-   * 
+   * 跳转设备地址
+   */
+  bindAddress:function(){
+      wx.navigateTo({
+        url: '../setAddress/setAddress',
+      })
+  },
+  /**
+   * 取消
    */
   toMySet:function(){
     wx.navigateBack({
@@ -92,7 +100,8 @@ Page({
     let jsonObject = JSON.parse(options.jsonStr);
     console.log("设备信息",jsonObject)
     this.setData({
-      obj: jsonObject
+      obj: jsonObject,
+      address: jsonObject.clientAddress
     });
     //验证函数
     this.initValidate();

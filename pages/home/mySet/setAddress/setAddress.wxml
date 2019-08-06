@@ -1,0 +1,45 @@
+<view class='container white f4'>
+ <form bindsubmit="formSubmit" bindreset="formReset"> 
+  <view class='header'>
+          <view class='cancel f3' bindtap='toFeSet'>取消</view>
+          <view class='preserve f3'>
+              <button class='but' form-type="submit">保存</button>
+          </view>
+   </view>
+   <view class='wraper'>
+      <!-- <text class='iconfont icon-dizhi fl '></text> -->
+      <!-- <text class='address fl'>广东省 广州市 黄埔区</text> -->
+      <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">所在城市</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="weui-input" name="city"  bindtap="open">{{province}}-{{city}}-{{county}}</view>
+            </view>
+      </view>
+
+      <view class='cleaned'></view>
+   </view>
+    <view class='textarea white f3'>
+      <textarea name="textarea" bindblur="bindTextAreaBlur" auto-height placeholder="请输入详细地址" />
+     </view>
+ </form> 
+
+ <view wx:if="{{condition}}" class="citypicker">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;background:#fff" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+        <view bindtap="open" class="city-cancel">取消</view>
+        <view bindtap="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+        <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+    </picker-view>
+</view>  
+</view>

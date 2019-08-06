@@ -1,7 +1,7 @@
 <view class="container f3">
 
   <view class='logo te-al'>
-    <image src='/images/logo.png' style='width:360rpx;height:320rpx'></image>
+    <image src='/images/logo.png' style='width:320rpx;height:160rpx'></image>
   </view>
   <!-- 密码登录 -->
   <view wx:if="{{isHiddend}}">

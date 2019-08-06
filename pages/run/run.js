@@ -216,9 +216,9 @@ Page({
     ]
   };
     
-    console.log(chart, "111")
+    console.log(chart, "chart加载前")
     if (chart != undefined ){
-      console.log(chart,"dfdfdfdf")
+      console.log(chart,"加载后")
       chart.setOption(option, true);
     }
    
@@ -458,7 +458,7 @@ Page({
              let { csTemp, tempTime } = that.data
              that.test(csTemp, tempTime, 'blue', '出水温度')
              dialog.hide();
-          }, 1500)
+          }, 3000)
          
         }
         
@@ -534,7 +534,7 @@ Page({
             let { csTemp, tempTime } = that.data
             that.test(csTemp, tempTime, 'green', '环境温度')
             dialog.hide();
-          }, 1500)
+          }, 3000)
 
         }
       }
@@ -926,6 +926,9 @@ Page({
       method: "POST",
       callBack: (res) => {
         console.log(res, '设备查询')
+        //判断是否绑定设备
+        that.isDev(res.data)
+
         that.setData({
           deviceArr: res.data,
           dataList: res.data[0],
@@ -946,9 +949,9 @@ Page({
   /**
    * 判断是否绑定设备
    */
-  isDev(){
-    let { deviceArr } = this.data
-    if (deviceArr.length=0){
+  isDev(deviceArr){
+    console.log("判断是否绑定设备")
+    if (deviceArr.length==0){
       wx.showModal({
         content: '请在我的设备,绑定设备',
         showCancel:false,
@@ -1375,8 +1378,8 @@ Page({
     // 设备查询
     this.devInfo()
   
-    //判断是否绑定设备
-    this.isDev()
+
+  
     
     //判断机型
     this.typeModel()

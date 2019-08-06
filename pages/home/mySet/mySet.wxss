@@ -243,5 +243,5 @@ page {
   width: 100%;
   text-align: center;
   color: #999;
-  margin-top: 40rpx;
+  margin-top: 70rpx;
 }

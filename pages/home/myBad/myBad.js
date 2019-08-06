@@ -62,7 +62,7 @@ Page({
   /**
    * 确认告警
    */
-  confirm0:function(e){
+  confirm:function(e){
     let that=this
     let { id, state } = that.data
     console.log(id, state)

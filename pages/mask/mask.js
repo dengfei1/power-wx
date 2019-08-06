@@ -11,14 +11,14 @@ Page({
     // 查看是否授权
     wx.getSetting({
       success: function(res) {
-        console.log(res.authSetting['scope.userInfo'],"111111111111111111111111111")
+        console.log(res.authSetting['scope.userInfo'],"查看是否授权")
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: function(res) {
               //从数据库获取用户信息
               that.queryUserInfo();
               //用户已经授权过
-              console.log(111);
+              console.log("用户已经授权过");
               //   判断用户登录状态
               var userList = wx.getStorageSync('userList')
               console.log("授权--------------------",userList)
@@ -36,7 +36,7 @@ Page({
         } else {
           // 用户没有授权
           // 改变 isHide 的值，显示授权页面
-          console.log(222);
+          console.log("没有授权");
           that.setData({
             isHide: true
           });
@@ -51,7 +51,7 @@ Page({
       //授权成功后，跳转进入小程序首页
       //   判断用户登录状态
       var userList = wx.getStorageSync('userList')
-      console.log(userList,"222222222222222222")
+      console.log(userList,"userList")
       // if (wx.getStorageSync('userList')) {
       //   wx.switchTab({
       //     url: '../home/home'

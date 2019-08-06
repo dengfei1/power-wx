@@ -23,7 +23,8 @@
                   </view>
                   <view class='itme'>
                     <view class='address'>联系地址<text class='rd'>*</text></view>
-                    <input name="address" placeholder="请输入联系人地址"  type='text'  value='{{obj.clientAddress!=""?obj.clientAddress:""}}'></input>
+                    <!-- <input name="address" placeholder="请输入联系人地址"  type='text'  value='{{obj.clientAddress!=""?obj.clientAddress:""}}'></input> -->
+                      <text class='ress' bindtap="bindAddress">{{address!=''?address:'请输入详细地址'}}</text>
                   </view>
                   <text class='fotn rd'>*请填写客户的真实信息，更好地为您提供售后服务</text>
                 </form>

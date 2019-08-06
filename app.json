@@ -45,7 +45,8 @@
     "pages/home/suggest/suggestDetails/suggestDetails",
     "pages/home/assesDetails/assesDetails",
     "pages/home/information/information",
-    "pages/home/myBad/badDetails/badDetails"
+    "pages/home/myBad/badDetails/badDetails",
+    "pages/home/mySet/setAddress/setAddress"
   ],
   "window": {
     "backgroundTextStyle": "light",

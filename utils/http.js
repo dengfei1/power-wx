@@ -132,37 +132,54 @@ function request(params, refetch) {
       //   title: "服务器出了点小差",
       //   icon: "none"
       // });statuscode:803
-      //再次调用wx.login()
-      console.log(res, '登录过期了')
-      wx.showModal({
-        title: '提示',
-        content: '你的登录信息过期了，请重新登录',
-        showCancel: false,
-        success:(res)=>{
-          wx.login({
-            success(res) {
-              that.setData({
-                code: res.code
-              })
+   
+      let key = wx.getStorageSync('apply').sessionKey;
+      console.log("key",key)
+      if (key) {
+        // 检查 session_key 是否过期
+        wx.checkSession({
+          // session_key 有效(未过期)
+          success: function () {
+            // 业务逻辑处理
+          },
 
-              console.log(res)
-              if (res.code) {
-                // 发起网络请求   
-                wx.request({
-                  url: app.globalData.url + '/login/WXlogin',
-                  data: {
-                    wxCode: res.code
-                  },
-                })
-              } else {
-                console.log('登录失败！' + res.errMsg)
+          // session_key 过期
+          fail: function () {
+            console.log(res, '登录过期了')
+            wx.showModal({
+              title: '提示',
+              content: '你的登录信息过期了，请重新登录',
+              showCancel: false,
+              success: (res) => {
+
+                if (res.confirm) {
+                  console.log("你的登录信息过期了，请重新登录")
+                  wx.reLaunch({
+                    url: '/pages/aa/aa'
+                  })
+                }
+
               }
-            }
-          })
-        }
-      })
-
-      
+            })
+          }
+        });
+    } else {
+        wx.showModal({
+          title: '提示',
+          content: '你的登录信息过期了，请重新登录',
+          showCancel: false,
+          success: (res) => {
+         
+                if (res.confirm) {
+                  console.log("你的登录信息过期了，请重新登录")
+                  wx.reLaunch({
+                    url: '/pages/aa/aa'
+                  })
+                }
+          
+          }
+        })
+  }
       
 
     }

@@ -61,14 +61,14 @@
         <view class='cleaned'></view>
         <view class='code'>故障描述：{{objData.message}}</view>
         <view class='suggest'>处理意见：<template is="wxParse" data="{{wxParseData:article.nodes}}" /></view>
-        <view class="confirm" bindtap="confirm{{objData.readState}}">{{objData.readState == 1?'已':''}}确认告警</view>
+        <view class="confirm" bindtap="{{objData.readState==0?confirm:''}}">{{objData.readState == 1?'已':''}}确认告警</view>
       </view>
        <!-- 取消 -->
       <text class='iconfont icon-shanchu  cancel' bindtap='bindCancel'></text>
     </view>
   </view>
    <!-- 信息提示 -->
-   <view class='tips f2'>{{tips}}</view>
+   <view class='tips f3'>{{tips}}</view>
     <!-- 信息提示结束 -->
      
     <!-- 实现屏幕上拉加载更多 -->
