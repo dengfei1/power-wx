@@ -48,9 +48,7 @@
             <view class='msg-user fl'>
               <view class='msg-top'>
                 <view class='user-name fl'>
-                  <view class='dis f1'>
-                
-                    {{nickName}}
+                  <view class='dis nickName f1'>{{nickName}}
                   </view>
                   <view class='line'></view>
                   <view class='mem-logo' style='width:120rpx'>

@@ -182,6 +182,13 @@
   display: block;
 }
 
+.nickName{
+  width:112rpx; 
+  height: 34rpx;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
 .msg-date {
   width: 150rpx;
   margin-top: 10rpx;

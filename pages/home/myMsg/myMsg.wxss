@@ -247,9 +247,10 @@
 
 .icon-shanchu {
   top: 0rpx;
-  right: 4rpx;
+  right: 7rpx;
   z-index: 100;
   position: absolute;
+  font-size: 45rpx;
 }
 
 .imaged{width: 96%;height: 300rpx;margin: 10rpx auto;background: pink}

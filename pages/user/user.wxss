@@ -104,3 +104,10 @@
 
 
 .item{border-bottom: 1px solid #cdcdcd;padding: 0 30rpx;width: 690rpx;font-size: 32rpx}
+
+.nickName{
+  width:112rpx; 
+  height: 34rpx;
+  overflow: hidden;
+  vertical-align: middle;
+}

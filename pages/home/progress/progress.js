@@ -102,32 +102,9 @@ Page({
         time2: ""
       },
     ],
-    listData:[
-      {
-        text1:"已维修",
-        // text2:'维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论',
-        // text3: '',
-        vlue: "维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论维修结论"
-      },
-      {
-        text1: "售后工程师处理中",
-        text2: '已派工',
-        text3: '售后工程师【姓名，工号，联系方式】，等待预约上门维修中...',
-        vlue: "姓名，工号，联系方式"
-      },
-      {
-        text1: "服务商派单处理中...",
-        text2: '已派单',
-        text3: '服务商[北京创新能源科技有限公司派沃售后部],等待派单处理中...',
-        vlue: "北京创新能源科技有限公司派沃售后部"
-      },
-      {
-        text1: "派单处理中...",
-        text2: '待处理',
-        text3: '已生成工单，等待派单处理',
-        // vlue:""
-      }
-    ]
+    listObj:{
+
+    }
 
   },
   /**
@@ -144,32 +121,7 @@ Page({
   //   // console.log("状态值", this.data.listArr)
   //   var state= this.data.listArr[index].state;
   //   console.log("状态值", state)
-  //   var i=0;
-  //   if(state==1) {
-  //     while (i < state*2){
-  //       this.data.detailData.progress[i].state=state
-  //       i++
-  //     } 
-  //   } 
-  //   if (state == 2) {
-  //     while (i < state * 2) {
-  //       this.data.detailData.progress[i].state = state
-  //       i++
-  //     }
-  //   } 
-  //   if (state == 3) {
-  //     while (i < state * 2) {
-  //       this.data.detailData.progress[i].state = state
-  //       i++
-  //     }
-  //   } 
-  //   if (state == 4) {
-  //     while (i < state * 2) {
-  //       this.data.detailData.progress[i].state = state
-  //       i++
-  //     }
-  //   } 
-  // },
+ 
 
   //进度条的状态
   // setPeocessIcon() {
@@ -208,14 +160,24 @@ Page({
    */
   setPeocessIcon(state){
     var that=this
-    var i=6
-    var t=0;
+    var t = 0;
+    var i = 6
     var end = 0//记录状态为1的最后的位置
     var processArr = that.data.processData
+    //清空之前的样式
+    for (var j = 0; j < processArr.length; j++) {
+      processArr[j].color = ""
+      processArr[j].background = "",
+      processArr[j].background1 = "",
+      processArr[j].border = ""
+      processArr[j].start = ""
+      processArr[j].end = ""
+    }
     while (t<=state){
       end = i
       console.log("state", i)
-     
+      console.log(processArr.length)
+    
 
       //2 4 6 样式不一样的
       if(i==1){
@@ -255,8 +217,7 @@ Page({
     })
   },
   clickTriangle:function(e){
-   
-    console.log("---------")
+
     var that=this
     var index = e.currentTarget.dataset.index;
     var deviceArr=that.data.deviceArr;
@@ -306,7 +267,6 @@ Page({
         this.setPeocessIcon(5)
         break;
       case "4":
-        console.log("执行")
         this.setPeocessIcon(6)
         break;
       default:
@@ -314,7 +274,7 @@ Page({
     }
 
     //获取时间 2019-07-25 10:34:36
-    console.log(that.data.deviceArr[index])
+    console.log("index="+index,that.data.deviceArr[index])
     console.log(that.data.deviceArr[index].bxTime)
     console.log(that.data.deviceArr[index].pdTime)
     //维修时间
@@ -334,6 +294,8 @@ Page({
     timeArr.forEach((item,index) => {
       console.log("item:", item)
       //这里需要截取的内容
+      times[index].time1 = ''
+      times[index].time2 = ''
       if (item!=undefined){
         time1 = item.substring(5, 10)
         time2 = item.substring(11, 16)
@@ -343,8 +305,18 @@ Page({
       }
       
     })
+
+    //获取派单进度信息
+    var fusName = that.data.deviceArr[index].fusName
+    var gcName = that.data.deviceArr[index].gcName
+    var gcNum = that.data.deviceArr[index].gcNum
+    var phone = that.data.deviceArr[index].phone
+    var wxjl = that.data.deviceArr[index].wxjl
+    var listObj = {fusName, gcName, gcNum, phone, wxjl}
+   
     this.setData({
-      times: times
+      times: times,
+      listObj: listObj
     })
     console.log("times", times)
     
