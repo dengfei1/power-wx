@@ -35,7 +35,7 @@
     </view>
   </view> -->
   <!-- 已确认 -->
-   <view class='list bo white' wx:for="{{dataArr1}}" data-index="{{index}}" bindtap="bindShow">
+   <view class='list bo white' wx:for="{{dataArr1}}" data-index="{{index}}" bindtap="bindShow1">
     <view class='top' style='background:{{item.background}};color:#fff'>
       <view class='title fl '>{{item.uuid}}</view>
       <view class='time fr'>{{item.startTime}}</view>
@@ -48,7 +48,7 @@
       <view class='cleaned'></view>
       <view class='code'>故障描述：{{item.message}}</view>
       <!-- <view class='suggest'>处理意见：<template is="wxParse" data="{{wxParseData:htmlAry[index].nodes}}" /></view> -->
-      <view class='chakan iconfont icon-icon-chakanxq1-copy fr f4' bindtap='deviceDetails' data-index="{{index}}"></view>
+      <view class='chakan iconfont icon-icon-chakanxq1-copy fr f4' bindtap='deviceDetails1' data-index="{{index}}"></view>
     </view>
   </view>
   
@@ -61,7 +61,7 @@
         <view class='cleaned'></view>
         <view class='code'>故障描述：{{objData.message}}</view>
         <view class='suggest'>处理意见：<template is="wxParse" data="{{wxParseData:article.nodes}}" /></view>
-        <view class="confirm" bindtap="confirm">确认告警</view>
+        <view class="confirm" bindtap="confirm{{objData.readState}}">{{objData.readState == 1?'已':''}}确认告警</view>
       </view>
        <!-- 取消 -->
       <text class='iconfont icon-shanchu  cancel' bindtap='bindCancel'></text>
@@ -70,4 +70,7 @@
    <!-- 信息提示 -->
    <view class='tips f2'>{{tips}}</view>
     <!-- 信息提示结束 -->
+     
+    <!-- 实现屏幕上拉加载更多 -->
+    <view class='remind' wx:if="{{state1==0}}"><view>没有更多了</view></view>
 </view>

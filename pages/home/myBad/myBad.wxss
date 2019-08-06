@@ -48,7 +48,6 @@
 }
 
 .confirm{
-  width: 120rpx;
   padding: 10rpx 20rpx;
   position: absolute;
   bottom: 40rpx;
@@ -74,4 +73,10 @@
   text-align: center;
   color: #999;
   margin-top: 40rpx;
+}
+
+/* 下拉刷新 */
+.remind{
+  margin-top: -30rpx;
+  text-align: center;
 }

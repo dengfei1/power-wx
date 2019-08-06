@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "故障报警"
+  "navigationBarTitleText": "故障报警",
+  "enablePullDownRefresh":true
 }
