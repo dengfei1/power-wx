@@ -107,7 +107,7 @@
                     <view class='right-item'>
                         <view class='item-text1 f2'>派单处理中...</view>
                     </view>
-                    <view class='right-item'>
+                    <view class='right-item' >
                         <view class='f3'>待处理</view>
                         <view class='item-text'>已生成工单，等待派单处理</view>
                     </view>
